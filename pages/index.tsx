@@ -27,12 +27,23 @@ export default function Home() {
             <h3>About me &rarr;</h3>
             <p>Learn a little bit more about me.</p>
           </a>
+          <a href="#projects" className={styles.card}>
+              <h3>My projects &rarr;</h3>
+              <p>View some of my recent and cool projects.</p>
+          </a>
         </div>
         <h1 className={styles.title} id="about-me">
             About me
         </h1>
         <p className={styles.description}>
             Programmer who enjoys making projects.
+        </p>
+        <h1 className={styles.title} id="projects">
+            Projects
+        </h1>
+        <p className={styles.description}>
+            <a href="https://github.com/Milo123459/glitter"><b>Speed up the way you commit to Git.</b></a>
+            <a href="https://github.com/Milo123459/website"><b>My personal website.</b></a>
         </p>
       </main>
 
