@@ -2,7 +2,14 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { MarkGithubIcon, DeviceCameraIcon } from '@primer/octicons-react';
 
-export default function Home() {
+interface props {
+	theme: {
+		bg: string;
+		fontColor: string;
+	};
+}
+
+export default function Home(props: props) {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -14,8 +21,14 @@ export default function Home() {
 					content="Personal website for Milo123459."
 				/>
 			</Head>
-
-			<main className={styles.main}>
+			<style>{`html {background-color: ${props.theme.bg}`}</style>
+			<main
+				className={styles.main}
+				style={{
+					backgroundColor: props.theme.bg,
+					color: props.theme.fontColor,
+				}}
+			>
 				<h1 className={styles.title}>Welcome to my personal website.</h1>
 
 				<p className={styles.description}>
@@ -66,17 +79,6 @@ export default function Home() {
 					</a>
 				</div>
 			</main>
-
-			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{' '}
-					<img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-				</a>
-			</footer>
 		</div>
 	);
 }
