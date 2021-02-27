@@ -20,6 +20,11 @@ function MyApp({ Component, pageProps }) {
 		<ThemeProvider theme={theme}>
 			<Head>
 				<script async src="https://arc.io/widget.min.js#ESikLuGk"></script>
+                <meta property="og:title" content="Milo123459" />
+				<meta
+					property="og:description"
+					content="Personal website for Milo123459."
+				/>
 			</Head>
 			{isMounted && <Component {...pageProps} theme={theme} />}
 		</ThemeProvider>
