@@ -8,6 +8,8 @@ export default function Home() {
       <Head>
         <title>Milo123459</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Milo123459" />
+        <meta property="og:description" content="Personal website for Milo123459." />
       </Head>
 
       <main className={styles.main}>
