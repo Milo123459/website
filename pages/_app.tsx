@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import useDarkMode from 'use-dark-mode';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../theme';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
 	const [isMounted, setIsMounted] = useState(false);
@@ -17,6 +18,9 @@ function MyApp({ Component, pageProps }) {
 	}, []);
 	return (
 		<ThemeProvider theme={theme}>
+			<Head>
+				<script async src="https://arc.io/widget.min.js#ESikLuGk"></script>
+			</Head>
 			{isMounted && <Component {...pageProps} theme={theme} />}
 		</ThemeProvider>
 	);
