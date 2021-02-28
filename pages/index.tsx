@@ -1,7 +1,14 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { MarkGithubIcon, DeviceCameraIcon } from '@primer/octicons-react';
-
+import dayjs from 'dayjs';
+import { Fragment } from 'react';
+import Card from '../components/Card';
+import Title from '../components/Title';
+import Description from '../components/Description';
+import { EventsResponse } from './api/commits';
+import nfetch from 'node-fetch';
+const fetcher = (url: string) => nfetch(url).then(res => res.json());
 interface props {
 	theme: {
 		bg: string;
@@ -15,11 +22,6 @@ export default function Home(props: props) {
 			<Head>
 				<title>Milo123459</title>
 				<link rel="icon" href="/favicon.ico" />
-				<meta property="og:title" content="Milo123459" />
-				<meta
-					property="og:description"
-					content="Personal website for Milo123459."
-				/>
 			</Head>
 			<style>{`html {background-color: ${props.theme.bg}`}</style>
 			<main
@@ -40,44 +42,47 @@ export default function Home(props: props) {
 						<DeviceCameraIcon size={48} />
 					</a>
 				</p>
-
+                
+                <div className={styles.grid}>
+                    <Card title="About me" link="#about-me" description="Learn a little bit more about me." />
+                    <Card title="My projects" link="#projects" description="View some of my recent and **cool** projects." />
+                    <Card title="Recent commits" link="#recent-commits" description="See some of my recent commits in **awesome** public repositories." />
+                </div>
+                <Title title="About me" />
+                <Description description="Programmer who is always trying to get better. Interested in **Rust** other technologies." />
+                <Title title="Projects" />
 				<div className={styles.grid}>
-					<a href="#about-me" className={styles.card}>
-						<h3>About me &rarr;</h3>
-						<p>Learn a little bit more about me.</p>
-					</a>
-					<a href="#projects" className={styles.card}>
-						<h3>My projects &rarr;</h3>
-						<p>View some of my recent and cool projects.</p>
-					</a>
+                    <Card title="Glitter" link="https://github.com/Milo123459/glitter" description="Speed up the way you commit to **Git**." />
+                    <Card title="Website" link="https://github.com/Milo123459/website" description="My personal website. You're on it right now!" />
 				</div>
-				<h1 className={styles.title} id="about-me">
-					About me
-				</h1>
-				<p className={styles.description}>
-					Programmer who enjoys making projects.
-				</p>
-				<h1 className={styles.title} id="projects">
-					Projects
-				</h1>
-				<div className={styles.grid}>
-					<a
-						href="https://github.com/Milo123459/glitter"
+                <Title title="Recent commits" />
+				{/* <div className={styles.grid}>
+                    {commits.error != undefined ? <Fragment>
+                        <a
 						className={styles.card}
 					>
-						<h3>Glitter &rarr;</h3>
+						<h3>An error occurred &rarr;</h3>
 						<p>
-							Speed up the way you commit to <b>Git</b>.
+							An error appeared when trying to fetch recent commits.
 						</p>
 					</a>
-					<a
-						href="https://github.com/Milo123459/website"
-						className={styles.card}
-					>
-						<h3>Website &rarr;</h3>
-						<p>My personal website.</p>
-					</a>
-				</div>
+                    </Fragment> : <Fragment>
+                        {console.log(commits.data)}
+                        <p> hola </p>
+                        {commits.data.map((value: EventsResponse) => {
+                            <a
+                            href={`https://github.com/${value.repo.name}`}
+                            className={styles.card}
+                            >
+                            <h3>{value.repo.name}</h3>
+                            <p>Pushed {value.payload.commits.length == 1 ? <Fragment>
+                                Pushed commit {value.payload.commits[0].sha.substring(0, 7)}
+                            </Fragment> : "hi"}</p>
+                        </a>
+                        })}
+                        </Fragment>
+                        }
+                </div> */}
 			</main>
 		</div>
 	);
