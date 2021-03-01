@@ -22,9 +22,8 @@ export default function Home(props: props) {
 			</Head>
 			<ToggleDarkMode></ToggleDarkMode>
 
-			
 			<style>{`html {background-color: ${props.theme.bg}`}</style>
-			
+
 			<main
 				className={styles.main}
 				style={{
@@ -32,8 +31,6 @@ export default function Home(props: props) {
 					color: props.theme.fontColor,
 				}}
 			>
-
-
 				<h1 className={styles.title}>Welcome to my personal website.</h1>
 
 				<p className={styles.description}>
