@@ -1,5 +1,5 @@
 const light = {
-	bg: 'white',
+	bg: '#DFDEE0',
 	fontColor: 'black',
 };
 
