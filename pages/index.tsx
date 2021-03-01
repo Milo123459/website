@@ -4,6 +4,8 @@ import { MarkGithubIcon, DeviceCameraIcon } from '@primer/octicons-react';
 import Card from '../components/Card';
 import Title from '../components/Title';
 import Description from '../components/Description';
+import ToggleDarkMode from '../components/ToggleDarkMode';
+
 interface props {
 	theme: {
 		bg: string;
@@ -18,7 +20,11 @@ export default function Home(props: props) {
 				<title>Milo123459</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<ToggleDarkMode></ToggleDarkMode>
+
+			
 			<style>{`html {background-color: ${props.theme.bg}`}</style>
+			
 			<main
 				className={styles.main}
 				style={{
@@ -26,6 +32,8 @@ export default function Home(props: props) {
 					color: props.theme.fontColor,
 				}}
 			>
+
+
 				<h1 className={styles.title}>Welcome to my personal website.</h1>
 
 				<p className={styles.description}>
