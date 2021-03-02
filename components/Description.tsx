@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/main.module.css';
 import { Remarkable } from 'remarkable';
 
 const md = new Remarkable({

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/main.module.css';
 import { MarkGithubIcon, DeviceCameraIcon } from '@primer/octicons-react';
 import Card from '../components/Card';
 import Title from '../components/Title';
