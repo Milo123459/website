@@ -91,7 +91,7 @@ export default function Home(props: props) {
 }
 
 function Commits() {
-	const { isLoading, error, data, isFetching } = useQuery(
+	const { isLoading, error, data } = useQuery(
 		'recentCommits',
 		async () => {
 			const data = await (
@@ -133,7 +133,7 @@ function Commits() {
 						link={`https://github.com/${value.repo.name}`}
 						description={`Pushed in <b>${
 							value.repo.name
-						}</b> on branch <b><a href="https://github.com/${value.repo.name}/origin/${value.payload.ref.slice(11)}">${value.payload.ref.slice(11)}</a></b>"${value.payload.commits.map((data: Commit) => {
+						}</b> on branch <b><u>${value.payload.ref.slice(11)}</u></b>${value.payload.commits.map((data: Commit) => {
 							return `<pre><code><a href="${data.url.replace(
 								/api./gi,
 								''
