@@ -110,7 +110,7 @@ function Commits() {
         <>
             {data.map((value: EventsResponse) => {
                 return (
-                    <Card title={`Pushed ${value.payload.commits?.length || 1} commit${(value.payload.commits?.length || 1) == 1 ? '' : 's'}`} link={`https://github.com/${value.repo.name}`} description={`Pushed in ${value.repo.name}${value.payload.commits.map((data: Commit) => {
+                    <Card title={`Pushed ${value.payload.commits?.length || 1} commit${(value.payload.commits?.length || 1) == 1 ? '' : 's'}`} link={`https://github.com/${value.repo.name}`} description={`Pushed in <b>${value.repo.name}</b>${value.payload.commits.map((data: Commit) => {
                         return `<pre><code><a href="${data.url.replace(/api./gi, '')}"><u>${data.message} [${data.sha.substring(0, 7)}]</u></a></code></pre>`
                     }).join("<br>")}`} />
                 )
