@@ -80,43 +80,74 @@ export default function Home(props: props) {
 					/>
 				</div>
 				<Title title="Recent commits" />
-                <div className={styles.grid}>
-				<QueryClientProvider client={client}>
-					<Commits />
-				</QueryClientProvider>
-                </div>
+				<div className={styles.grid}>
+					<QueryClientProvider client={client}>
+						<Commits />
+					</QueryClientProvider>
+				</div>
 			</main>
 		</div>
 	);
 }
 
 function Commits() {
-	const { isLoading, error, data, isFetching } = useQuery('recentCommits', async () => {
-		const data = await (
-			await fetch('https://api.github.com/users/Milo123459/events')
-		).json();
-		const usable: Array<EventsResponse> = data
-			.filter((value: EventsResponse) => value.type == 'PushEvent' && value.public == true)
-			.slice(0, 3);
-        return usable;
-	});
-    if(isLoading) return (
-        <Card title="Loading.." description="Fetching data from the API! Beep boop. Boop beep?" link="/"/>
-    )
-    if(error) return (
-        <Card title="An error occurred" description={`Beep boop. An error occurred! ${(error as any).message}`} link="/"/>
-    )
-    return (
-        <>
-            {data.map((value: EventsResponse) => {
-                return (
-                    <Card title={`Pushed ${value.payload.commits?.length || 1} commit${(value.payload.commits?.length || 1) == 1 ? '' : 's'}`} link={`https://github.com/${value.repo.name}`} description={`Pushed in <b>${value.repo.name}</b>${value.payload.commits.map((data: Commit) => {
-                        return `<pre><code><a href="${data.url.replace(/api./gi, '')}"><u>${data.message} [${data.sha.substring(0, 7)}]</u></a></code></pre>`
-                    }).join("<br>")}`} />
-                )
-            })}
-        </>
-    )
+	const { isLoading, error, data, isFetching } = useQuery(
+		'recentCommits',
+		async () => {
+			const data = await (
+				await fetch('https://api.github.com/users/Milo123459/events')
+			).json();
+			const usable: Array<EventsResponse> = data
+				.filter(
+					(value: EventsResponse) =>
+						value.type == 'PushEvent' && value.public == true
+				)
+				.slice(0, 3);
+			return usable;
+		}
+	);
+	if (isLoading)
+		return (
+			<Card
+				title="Loading.."
+				description="Fetching data from the API! Beep boop. Boop beep?"
+				link="/"
+			/>
+		);
+	if (error)
+		return (
+			<Card
+				title="An error occurred"
+				description={`Beep boop. An error occurred! ${(error as any).message}`}
+				link="/"
+			/>
+		);
+	return (
+		<>
+			{data.map((value: EventsResponse) => {
+				return (
+					<Card
+						title={`Pushed ${value.payload.commits?.length || 1} commit${
+							(value.payload.commits?.length || 1) == 1 ? '' : 's'
+						}`}
+						link={`https://github.com/${value.repo.name}`}
+						description={`Pushed in <b>${
+							value.repo.name
+						}</b>${value.payload.commits.map((data: Commit) => {
+							return `<pre><code><a href="${data.url.replace(
+								/api./gi,
+								''
+							)}"><u>${data.message} [${data.sha.substring(
+								0,
+								7
+							)}]</u></a></code></pre>`;
+						}).join(`
+                    `)}`}
+					/>
+				);
+			})}
+		</>
+	);
 }
 
 export interface EventsResponse {
