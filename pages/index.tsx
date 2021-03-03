@@ -137,7 +137,7 @@ function Commits() {
 							return `<pre><code><a href="${data.url.replace(
 								/api./gi,
 								''
-							)}"><u>${data.message} [${data.sha.substring(
+							).replace(/\/repos/gi, '')}"><u>${data.message} [${data.sha.substring(
 								0,
 								7
 							)}]</u></a></code></pre>`;
