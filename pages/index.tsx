@@ -133,7 +133,7 @@ function Commits() {
 						link={`https://github.com/${value.repo.name}`}
 						description={`Pushed in <b>${
 							value.repo.name
-						}</b>${value.payload.commits.map((data: Commit) => {
+						}</b> on branch <b><a href="https://github.com/${value.repo.name}/origin/${value.payload.ref.slice(11)}>${value.payload.ref.slice(11)}</a></b>"${value.payload.commits.map((data: Commit) => {
 							return `<pre><code><a href="${data.url.replace(
 								/api./gi,
 								''
