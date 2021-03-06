@@ -6,7 +6,6 @@ import Title from '../components/Title';
 import Description from '../components/Description';
 import ToggleDarkMode from '../components/ToggleDarkMode';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
-import nFetch from 'node-fetch';
 
 const client = new QueryClient();
 
@@ -135,7 +134,7 @@ function Commits() {
 							value.repo.name
 						}</b> on branch <b><u>${value.payload.ref.slice(11)}</u></b>${value.payload.commits.map((data: Commit) => {
 							return `<pre><code><a href="${data.url.replace(
-								/api./gi,
+								/api./i,
 								''
 							).replace(/\/repos/gi, '').replace(/commits/gi, 'commit')}"><u>${data.message} [${data.sha.substring(
 								0,
