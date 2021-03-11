@@ -90,21 +90,18 @@ export default function Home(props: props) {
 }
 
 function Commits() {
-	const { isLoading, error, data } = useQuery(
-		'recentCommits',
-		async () => {
-			const data = await (
-				await fetch('https://api.github.com/users/Milo123459/events')
-			).json();
-			const usable: Array<EventsResponse> = data
-				.filter(
-					(value: EventsResponse) =>
-						value.type == 'PushEvent' && value.public == true
-				)
-				.slice(0, 3);
-			return usable;
-		}
-	);
+	const { isLoading, error, data } = useQuery('recentCommits', async () => {
+		const data = await (
+			await fetch('https://api.github.com/users/Milo123459/events')
+		).json();
+		const usable: Array<EventsResponse> = data
+			.filter(
+				(value: EventsResponse) =>
+					value.type == 'PushEvent' && value.public == true
+			)
+			.slice(0, 3);
+		return usable;
+	});
 	if (isLoading)
 		return (
 			<Card
@@ -132,14 +129,15 @@ function Commits() {
 						link={`https://github.com/${value.repo.name}`}
 						description={`Pushed in <b>${
 							value.repo.name
-						}</b> on branch <b><u>${value.payload.ref.slice(11)}</u></b>${value.payload.commits.map((data: Commit) => {
-							return `<pre><code><a href="${data.url.replace(
-								/api./i,
-								''
-							).replace(/\/repos/gi, '').replace(/commits/gi, 'commit')}"><u>${data.message} [${data.sha.substring(
-								0,
-								7
-							)}]</u></a></code></pre>`;
+						}</b> on branch <b><u>${value.payload.ref.slice(
+							11
+						)}</u></b>${value.payload.commits.map((data: Commit) => {
+							return `<pre><code><a href="${data.url
+								.replace(/api./i, '')
+								.replace(/\/repos/gi, '')
+								.replace(/commits/gi, 'commit')}"><u>${
+								data.message
+							} [${data.sha.substring(0, 7)}]</u></a></code></pre>`;
 						}).join(`
                     `)}`}
 					/>
