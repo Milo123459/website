@@ -88,6 +88,8 @@ export default function Home(props: props) {
                 <Title title="Miscellaneous" />
                 <Description description="What I'm listening to on Spotify right now." />
                 <img src="https://spotify-github-profile.vercel.app/api/view?uid=ag4njzejamkgxd0nxc5br6s8n&cover_image=true&theme=novatorem" />
+                <Description description="My github stats card." />
+                <img src="https://raw.githubusercontent.com/Milo123459/Milo123459/master/github-metrics.svg" />
 			</main>
 		</div>
 	);
