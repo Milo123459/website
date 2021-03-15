@@ -62,6 +62,7 @@ export default function Home(props: props) {
 						link="#recent-commits"
 						description="See some of my recent commits in **awesome** public repositories."
 					/>
+                    <Card title="Miscellaneous" link="#miscellaneous" description="Random things about me. Maybe what I'm listening to on Spotify?" />
 				</div>
 				<Title title="About me" />
 				<Description description="Programmer who is always trying to get better. Interested in **Rust** other technologies." />
@@ -84,6 +85,9 @@ export default function Home(props: props) {
 						<Commits />
 					</QueryClientProvider>
 				</div>
+                <Title title="Miscellaneous" />
+                <Description description="What I'm listening to on Spotify right now." />
+                <img src="https://spotify-github-profile.vercel.app/api/view?uid=ag4njzejamkgxd0nxc5br6s8n&cover_image=true&theme=novatorem" />
 			</main>
 		</div>
 	);
