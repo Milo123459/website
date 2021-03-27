@@ -170,3 +170,14 @@
 		flex-direction: column;
 	}
 }
+/*Example of how to make your page responsive */
+@media only screen and(max-width:400px){
+.Home_card__2SdtB p{
+display:none;
+  }
+.Home_title__3DjR7 {
+        font-size: 2.5rem;
+       }
+  
+  
+}
