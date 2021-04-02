@@ -1,3 +1,6 @@
 module.exports = {
-	productionBrowserSourceMaps: true,
+	productionBrowserSourceMaps: true,  
+    future: {
+        webpack5: true,
+      },
 };
