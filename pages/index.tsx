@@ -13,6 +13,7 @@ interface props {
 	theme: {
 		bg: string;
 		fontColor: string;
+		cardOutline: string;
 	};
 }
 
@@ -51,18 +52,26 @@ export default function Home(props: props) {
 						title="About me"
 						link="#about-me"
 						description="Learn a little bit more about me."
+						border={props.theme.cardOutline}
 					/>
 					<Card
 						title="My projects"
 						link="#projects"
 						description="View some of my recent and **cool** projects."
+						border={props.theme.cardOutline}
 					/>
 					<Card
 						title="Recent commits"
 						link="#recent-commits"
 						description="See some of my recent commits in **awesome** public repositories."
+						border={props.theme.cardOutline}
 					/>
-                    <Card title="Miscellaneous" link="#miscellaneous" description="Random things about me. Maybe what I'm listening to on Spotify?" />
+					<Card
+						title="Miscellaneous"
+						link="#miscellaneous"
+						description="Random things about me. Maybe what I'm listening to on Spotify?"
+						border={props.theme.cardOutline}
+					/>
 				</div>
 				<Title title="About me" />
 				<Description description="Programmer who is always trying to get better. Interested in **Rust** other technologies." />
@@ -72,28 +81,30 @@ export default function Home(props: props) {
 						title="Glitter"
 						link="https://github.com/Milo123459/glitter"
 						description="Speed up the way you commit to **Git**."
+						border={props.theme.cardOutline}
 					/>
 					<Card
 						title="Website"
 						link="https://github.com/Milo123459/website"
 						description="My personal website. You're on it right now!"
+						border={props.theme.cardOutline}
 					/>
 				</div>
 				<Title title="Recent commits" />
 				<div className={styles.grid}>
 					<QueryClientProvider client={client}>
-						<Commits />
+						<Commits {...props} />
 					</QueryClientProvider>
 				</div>
-                <Title title="Miscellaneous" />
-                <Description description="What I'm listening to on Spotify right now." />
-                <img src="https://spotify-github-profile.vercel.app/api/view?uid=ag4njzejamkgxd0nxc5br6s8n&cover_image=true&theme=novatorem" />
+				<Title title="Miscellaneous" />
+				<Description description="What I'm listening to on Spotify right now." />
+				<img src="https://spotify-github-profile.vercel.app/api/view?uid=ag4njzejamkgxd0nxc5br6s8n&cover_image=true&theme=novatorem" />
 			</main>
 		</div>
 	);
 }
 
-function Commits() {
+function Commits(props: props) {
 	const { isLoading, error, data } = useQuery('recentCommits', async () => {
 		const data = await (
 			await fetch('https://api.github.com/users/Milo123459/events')
@@ -112,6 +123,7 @@ function Commits() {
 				title="Loading.."
 				description="Fetching data from the API! Beep boop. Boop beep?"
 				link="/"
+				border={props.theme.cardOutline}
 			/>
 		);
 	if (error)
@@ -120,6 +132,7 @@ function Commits() {
 				title="An error occurred"
 				description={`Beep boop. An error occurred! ${(error as any).message}`}
 				link="/"
+				border={props.theme.cardOutline}
 			/>
 		);
 	return (
@@ -144,6 +157,7 @@ function Commits() {
 							} [${data.sha.substring(0, 7)}]</u></a></code></pre>`;
 						}).join(`
                     `)}`}
+						border={props.theme.cardOutline}
 					/>
 				);
 			})}

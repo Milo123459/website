@@ -137,7 +137,6 @@
 	text-align: left;
 	color: inherit;
 	text-decoration: none;
-	border: 1px solid #eaeaea;
 	border-radius: 10px;
 	transition: border-color 0.5s, color 0.5s ease-out;
 }
