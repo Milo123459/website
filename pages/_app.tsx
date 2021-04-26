@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
 		<ThemeProvider theme={theme}>
 			<Head>
 				<script async src="https://arc.io/widget.min.js#1QP8hD3a"></script>
-				<meta property="og:title" content="Milo123459" />
+				<meta property="og:title" content="About Milo123459" />
 				<meta
 					property="og:description"
 					content="Personal website for Milo123459."
