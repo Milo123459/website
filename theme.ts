@@ -5,7 +5,7 @@ const light = {
 };
 
 const dark = {
-	bg: 'black',
+	bg: '#141414',
 	fontColor: 'white',
 	cardOutline: '#eaeaea',
 };
