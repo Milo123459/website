@@ -21,7 +21,7 @@ export default function Home(props: props) {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Milo123459</title>
+				<title>About Milo123459</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<ToggleDarkMode></ToggleDarkMode>
