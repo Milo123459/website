@@ -1,4 +1,5 @@
 import styles from '../styles/Components.module.css';
+import Code from './Code';
 
 interface props {
 	link: string;
@@ -9,7 +10,7 @@ export default function CodeLink(props: props) {
 	return (
 		<pre>
 			<a className={styles.codelink} href={props.link}>
-				<code>{props.text}</code>
+				<Code>{props.text}</Code>
 			</a>
 		</pre>
 	);

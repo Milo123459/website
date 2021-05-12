@@ -8,15 +8,9 @@
 	min-height: 100vh;
 	padding: 0 0.5rem;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .main {
-    display: flex;
-	align-items: center;
     color: white;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: inline-block
 }

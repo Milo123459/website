@@ -7,11 +7,12 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<meta property="og:title" content="AMilo123459" />
+				<meta property="og:title" content="Milo123459" />
 				<meta
 					property="og:description"
 					content="Personal website for Milo123459."
 				/>
+                <title>Milo123459</title>
 			</Head>
 			<Component {...pageProps} />
 		</>

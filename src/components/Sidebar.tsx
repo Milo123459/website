@@ -6,6 +6,8 @@ export default function Sidebar() {
 		<div className={styles.sidebar}>
 			<CodeLink link="/" text="home" />
 			<CodeLink link="/projects" text="projects" />
+            <CodeLink link="/activity" text="activity" />
+            <CodeLink link="/recent" text="recent contributions" />
 		</div>
 	);
 }
