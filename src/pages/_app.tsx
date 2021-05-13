@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
 					property="og:description"
 					content="Personal website for Milo123459."
 				/>
-                <title>Milo123459</title>
+				<title>Milo123459</title>
 			</Head>
 			<Component {...pageProps} />
 		</>
