@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Base.module.css';
 import Sidebar from '../components/Sidebar';
 import Code from '../components/Code';
 
