@@ -1,13 +1,17 @@
-import styles from '../styles/Components.module.css';
-
-interface props {
-	children: string;
+import { ReactNode } from 'react';
+interface Props {
+	children: ReactNode;
+	noPre?: boolean;
 }
 
-export default function Code(props: props) {
-	return (
-		<pre>
-			<code>{props.children}</code>
-		</pre>
-	);
+export default function Code(props: Props) {
+	if (props.noPre) {
+		return <code>{props.children}</code>;
+	} else {
+		return (
+			<pre>
+				<code>{props.children}</code>
+			</pre>
+		);
+	}
 }
