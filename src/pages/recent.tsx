@@ -56,8 +56,17 @@ function Commits() {
 						noPre={true}
 						colour="pink"
 					>
-						{value.payload.commits[0].sha.substring(0, 7)} ({value.payload.commits[0].message.split("\n")[0]})
-					</CodeLink> in <CodeLink link={`https://github.com/${value.repo.name}`} noPre={true} colour="pink">{value.repo.name}</CodeLink>
+						{value.payload.commits[0].sha.substring(0, 7)} (
+						{value.payload.commits[0].message.split('\n')[0]})
+					</CodeLink>{' '}
+					in{' '}
+					<CodeLink
+						link={`https://github.com/${value.repo.name}`}
+						noPre={true}
+						colour="pink"
+					>
+						{value.repo.name}
+					</CodeLink>
 				</Code>
 			))}
 		</>
