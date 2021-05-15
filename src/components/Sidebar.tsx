@@ -8,6 +8,7 @@ export default function Sidebar() {
 			<CodeLink link="/projects">projects</CodeLink>
 			<CodeLink link="/recent">recent contributions</CodeLink>
 			<CodeLink link="/interests">interests</CodeLink>
+            <CodeLink link="/friends">friends</CodeLink>
 		</div>
 	);
 }

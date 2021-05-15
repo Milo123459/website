@@ -12,7 +12,7 @@ export default function Recent() {
 		<div className={styles.container}>
 			<Sidebar />
 			<main className={styles.main}>
-				<div style={{ paddingLeft: '30%' }}>
+				<div style={{ paddingLeft: '3%' }}>
 					<Code>recent commits</Code>
 					<QueryClientProvider client={client}>
 						<Commits />
