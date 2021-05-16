@@ -12,6 +12,7 @@ export default function Friends() {
 					<Code><CodeLink link="https://github.com/vladimyr" noPre={true} colour="pink">vladimyr</CodeLink> - cool guy, helps me a lot with rust :).</Code>
 					<Code><CodeLink link="https://github.com/octocat" noPre={true} colour="pink">octocat</CodeLink> - who isn't friends with this cute guy</Code>
 					<Code><CodeLink link="https://github.com/Suyashtnt" noPre={true} colour="pink">tabs</CodeLink> - helped teach me rust!</Code>
+                    <Code><CodeLink link="https://github.com/funnion" noPre={true} colour="pink">funnion</CodeLink> - cool guy, been just a great guy to speak to!</Code>
 				</div>
 			</main>
 		</div>
