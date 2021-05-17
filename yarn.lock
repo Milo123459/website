@@ -110,10 +110,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
-"@primer/octicons-react@^14.0.0":
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-14.0.0.tgz#f2cdad24a5482535dcd85a91b939620aa7796ba7"
-  integrity sha512-SrQgL4d1GcaOHvlpfGdCmITG7S9w34eLwwDEweM38hspgeJvSlHnZi80N2NkAJluZYrVOM8pwt4IqpHVNVLg6A==
+"@primer/octicons-react@^14.1.0":
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-14.1.0.tgz#5ef36c6096d2f6d486ed7254fcef927a3bd6ef52"
+  integrity sha512-gf7knl1HjyyCWt+eogE6D/aZHDcIXrQpkXgLYw8Tskdai6lEjbJl7BDDgra42P2ZwqDcBCQcdF25Ktu30y6ilA==
 
 "@types/node-fetch@^2.5.10":
   version "2.5.10"
