@@ -2,6 +2,7 @@ import styles from '../styles/Base.module.css';
 import Sidebar from '../components/Sidebar';
 import Code from '../components/Code';
 import CodeLink from '../components/CodeLink';
+import GitHubRepo from '../components/GitHubRepo';
 
 export default function Vext() {
 	return (
@@ -25,6 +26,7 @@ export default function Vext() {
 						Vext proves, that being lightweight doesn't have to be a sacrifice
 						for UX.
 					</Code>
+					<GitHubRepo repo="Milo123459/vext" />
 				</div>
 			</main>
 		</div>
