@@ -12,8 +12,8 @@ export default function Home() {
 					<Code>i love writing code</Code>
 					<Code>i do it too much</Code>
 					<Code>i seriously need help</Code>
-                    <Code>thanks for visiting</Code>
-                    <Code>love you gqv, you will be missed</Code>
+					<Code>thanks for visiting</Code>
+					<Code>love you gqv, you will be missed</Code>
 				</div>
 			</main>
 		</div>

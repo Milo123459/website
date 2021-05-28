@@ -9,11 +9,56 @@ export default function Friends() {
 			<Sidebar />
 			<main className={styles.main}>
 				<div style={{ paddingLeft: '3%' }}>
-					<Code><CodeLink link="https://github.com/vladimyr" noPre={true} colour="pink">vladimyr</CodeLink> - cool guy, helps me a lot with rust :).</Code>
-					<Code><CodeLink link="https://github.com/octocat" noPre={true} colour="pink">octocat</CodeLink> - who isn't friends with this cute guy</Code>
-					<Code><CodeLink link="https://github.com/Suyashtnt" noPre={true} colour="pink">tabs</CodeLink> - helped teach me rust!</Code>
-                    <Code><CodeLink link="https://github.com/funnion" noPre={true} colour="pink">funnion</CodeLink> - cool guy, been just a great guy to speak to!</Code>
-                    <Code><CodeLink link="https://github.com/falky97" noPre={true} colour="pink">falky97</CodeLink> - creator and founder of fig. super nice guy to talk to!</Code>
+					<Code>
+						<CodeLink
+							link="https://github.com/vladimyr"
+							noPre={true}
+							colour="pink"
+						>
+							vladimyr
+						</CodeLink>{' '}
+						- cool guy, helps me a lot with rust :).
+					</Code>
+					<Code>
+						<CodeLink
+							link="https://github.com/octocat"
+							noPre={true}
+							colour="pink"
+						>
+							octocat
+						</CodeLink>{' '}
+						- who isn't friends with this cute guy
+					</Code>
+					<Code>
+						<CodeLink
+							link="https://github.com/Suyashtnt"
+							noPre={true}
+							colour="pink"
+						>
+							tabs
+						</CodeLink>{' '}
+						- helped teach me rust!
+					</Code>
+					<Code>
+						<CodeLink
+							link="https://github.com/funnion"
+							noPre={true}
+							colour="pink"
+						>
+							funnion
+						</CodeLink>{' '}
+						- cool guy, been just a great guy to speak to!
+					</Code>
+					<Code>
+						<CodeLink
+							link="https://github.com/falky97"
+							noPre={true}
+							colour="pink"
+						>
+							falky97
+						</CodeLink>{' '}
+						- creator and founder of fig. super nice guy to talk to!
+					</Code>
 				</div>
 			</main>
 		</div>
