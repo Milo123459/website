@@ -59,6 +59,16 @@ export default function Friends() {
 						</CodeLink>{' '}
 						- creator and founder of fig. super nice guy to talk to!
 					</Code>
+                    <Code>
+						<CodeLink
+							link="https://github.com/thrownhades"
+							noPre={true}
+							colour="pink"
+						>
+							thrownhades
+						</CodeLink>{' '}
+						- some guy that has a name
+					</Code>
 				</div>
 			</main>
 		</div>
