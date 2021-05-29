@@ -7,7 +7,7 @@ export default function Home() {
 		<div className={styles.container}>
 			<Sidebar />
 			<main className={styles.main}>
-				<div style={{ paddingLeft: '80%' }}>
+				<div style={{ paddingLeft: '3%' }}>
 					<Code>this isn't a valid page, go home</Code>
 				</div>
 			</main>
