@@ -12,14 +12,12 @@
 		"@primer/octicons-react": "^14.2.1",
 		"modern-normalize": "^1.1.0",
 		"next": "10.2.3",
-		"node-fetch": "^2.6.1",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"react-query": "^3.16.0"
 	},
 	"devDependencies": {
 		"@types/node": "^15.6.1",
-		"@types/node-fetch": "^2.5.10",
 		"@types/react": "^17.0.8",
 		"prettier": "^2.3.0",
 		"typescript": "^4.3.2"
