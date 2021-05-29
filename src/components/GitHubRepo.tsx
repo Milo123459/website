@@ -32,7 +32,7 @@ function Query(props: Props) {
 		return <Code>i errored {(error as { message: string }).message} </Code>;
 	}
 	return (
-		<>
+		<div>
 			<CodeLink
 				noPre={true}
 				colour="pink"
@@ -52,6 +52,6 @@ function Query(props: Props) {
             &nbsp;
 			<EyeIcon size={20}></EyeIcon>{' '}
 			<Code noPre={true}>{data.watchers_count.toLocaleString()}</Code>
-		</>
+		</div>
 	);
 }
