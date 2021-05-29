@@ -1,6 +1,7 @@
 import styles from '../styles/Base.module.css';
 import Sidebar from '../components/Sidebar';
 import Code from '../components/Code';
+import CodeLink from '../components/CodeLink';
 
 export default function Home() {
 	return (
@@ -8,7 +9,7 @@ export default function Home() {
 			<Sidebar />
 			<main className={styles.main}>
 				<div style={{ paddingLeft: '3%' }}>
-					<Code>this isn't a valid page, go home</Code>
+					<Code>you seem lost, either get a map, or <CodeLink link="/" noPre={true} colour="pink">go home</CodeLink></Code>
 				</div>
 			</main>
 		</div>
