@@ -29,6 +29,9 @@ export default function Vext() {
 					<GitHubRepo repo="Milo123459/vext" />
 
                     <Code><i>Still a WIP!</i></Code>
+
+                    <Code>important note, i'm writing this as a side project.</Code>
+                    <Code>i hope to have it finished by the end of summer 2021</Code>
 				</div>
 			</main>
 		</div>
