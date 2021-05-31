@@ -9,7 +9,12 @@ export default function Home() {
 			<Sidebar />
 			<main className={styles.main}>
 				<div style={{ paddingLeft: '3%' }}>
-					<Code>you seem lost, either get a map, or <CodeLink link="/" noPre={true} colour="pink">go home</CodeLink></Code>
+					<Code>
+						you seem lost, either get a map, or{' '}
+						<CodeLink link="/" noPre={true} colour="pink">
+							go home
+						</CodeLink>
+					</Code>
 				</div>
 			</main>
 		</div>

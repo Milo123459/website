@@ -44,14 +44,9 @@ function Query(props: Props) {
 			<br />
 			<StarIcon size={20}></StarIcon>{' '}
 			<Code noPre={true}>{data.stargazers_count.toLocaleString()}</Code>
-			&nbsp;
-            &nbsp;
+			&nbsp; &nbsp;
 			<RepoForkedIcon size={20}></RepoForkedIcon>{' '}
 			<Code noPre={true}>{data.forks_count.toLocaleString()}</Code>
-			&nbsp;
-            &nbsp;
-			<EyeIcon size={20}></EyeIcon>{' '}
-			<Code noPre={true}>{data.watchers_count.toLocaleString()}</Code>
 		</div>
 	);
 }

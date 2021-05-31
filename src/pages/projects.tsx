@@ -41,7 +41,10 @@ export default function Projects() {
 							glitter
 						</CodeLink>{' '}
 						- glitter is a git tool allowing you to template out commit
-						messages.
+						messages.{' '}
+						<CodeLink link="/glitter" noPre={true} colour="pink">
+							website
+						</CodeLink>
 					</Code>
 				</div>
 			</main>
