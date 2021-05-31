@@ -1,5 +1,10 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
-import { StarIcon, RepoForkedIcon, EyeIcon } from '@primer/octicons-react';
+import {
+	StarIcon,
+	RepoForkedIcon,
+	RepoIcon,
+	FileCodeIcon,
+} from '@primer/octicons-react';
 import { RepoResponse } from '../typings/RepoResponse';
 import Code from '../components/Code';
 import CodeLink from '../components/CodeLink';
@@ -33,6 +38,8 @@ function Query(props: Props) {
 	}
 	return (
 		<div>
+			<RepoIcon size={20}></RepoIcon>
+			&nbsp;&nbsp;
 			<CodeLink
 				noPre={true}
 				colour="pink"
@@ -42,11 +49,14 @@ function Query(props: Props) {
 			</CodeLink>
 			<br />
 			<br />
-			<StarIcon size={20}></StarIcon>{' '}
+			<StarIcon size={20}></StarIcon>&nbsp;{' '}
 			<Code noPre={true}>{data.stargazers_count.toLocaleString()}</Code>
 			&nbsp; &nbsp;
-			<RepoForkedIcon size={20}></RepoForkedIcon>{' '}
+			<RepoForkedIcon size={20}></RepoForkedIcon>&nbsp;{' '}
 			<Code noPre={true}>{data.forks_count.toLocaleString()}</Code>
+			&nbsp; &nbsp;
+			<FileCodeIcon size={20}></FileCodeIcon>{' '}
+			<Code noPre={true}>&nbsp;{data?.language || 'Blank'}</Code>
 		</div>
 	);
 }
