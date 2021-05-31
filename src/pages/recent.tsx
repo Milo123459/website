@@ -57,7 +57,7 @@ function Commits() {
 						colour="pink"
 					>
 						{value.payload.commits[0].sha.substring(0, 7)} (
-						{value.payload.commits[0].message.split('\n')[0]})
+						<b>{value.payload.commits[0].message.split('\n')[0]})</b>
 					</CodeLink>{' '}
 					in{' '}
 					<CodeLink
