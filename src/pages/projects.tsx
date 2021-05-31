@@ -11,15 +11,15 @@ export default function Projects() {
 				<div style={{ paddingLeft: '3%' }}>
 					<Code>
 						<CodeLink
-							link="https://github.com/Milo123459/vext"
+							link="/vext"
 							noPre={true}
 							colour="pink"
 						>
 							vext
 						</CodeLink>{' '}
 						- vext is a code editor that lives in the terminal, written in V.{' '}
-						<CodeLink link="/vext" noPre={true} colour="pink">
-							website
+						<CodeLink link="https://github.com/Milo123459/vext" noPre={true} colour="pink">
+							repo
 						</CodeLink>
 					</Code>
 					<Code>
@@ -34,7 +34,7 @@ export default function Projects() {
 					</Code>
 					<Code>
 						<CodeLink
-							link="https://github.com/Milo123459/glitter"
+							link="/glitter"
 							noPre={true}
 							colour="pink"
 						>
@@ -42,8 +42,8 @@ export default function Projects() {
 						</CodeLink>{' '}
 						- glitter is a git tool allowing you to template out commit
 						messages.{' '}
-						<CodeLink link="/glitter" noPre={true} colour="pink">
-							website
+						<CodeLink link="https://github.com/Milo123459/glitter" noPre={true} colour="pink">
+							repo
 						</CodeLink>
 					</Code>
 				</div>
