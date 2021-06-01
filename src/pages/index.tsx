@@ -13,7 +13,7 @@ export default function Home() {
 					<Code>i do it too much</Code>
 					<Code>i seriously need help</Code>
 					<Code>thanks for visiting</Code>
-					<Code>love you qgv and pazdikan, you will both be missed</Code>
+					<Code>love you qgv and pazdikan</Code>
 				</div>
 			</main>
 		</div>
