@@ -41,11 +41,11 @@ export default function Friends() {
 					</Code>
 					<Code>
 						<CodeLink
-							link="https://github.com/funnion"
+							link="https://github.com/SmolNoBeany"
 							noPre={true}
 							colour="pink"
 						>
-							funnion
+                            SmolNoBeany
 						</CodeLink>{' '}
 						- cool guy, been just a great guy to speak to!
 					</Code>
