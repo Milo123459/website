@@ -9,6 +9,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<div style={{ paddingLeft: '3%' }}>
 					<Code>hi</Code>
+                    <Code>im milo</Code>
 					<Code>i love writing code</Code>
 					<Code>i do it too much</Code>
 					<Code>i seriously need help</Code>
