@@ -1,8 +1,8 @@
-import styles from '../styles/Base.module.css';
-import Sidebar from '../components/Sidebar';
-import Code from '../components/Code';
-import CodeLink from '../components/CodeLink';
-import GitHubRepo from '../components/GitHubRepo';
+import styles from '../../styles/Base.module.css';
+import Sidebar from '../../components/Sidebar';
+import Code from '../../components/Code';
+import CodeLink from '../../components/CodeLink';
+import GitHubRepo from '../../components/GitHubRepo';
 
 export default function Vext() {
 	return (

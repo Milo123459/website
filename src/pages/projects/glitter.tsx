@@ -1,7 +1,7 @@
-import styles from '../styles/Base.module.css';
-import Sidebar from '../components/Sidebar';
-import Code from '../components/Code';
-import GitHubRepo from '../components/GitHubRepo';
+import styles from '../../styles/Base.module.css';
+import Sidebar from '../../components/Sidebar';
+import Code from '../../components/Code';
+import GitHubRepo from '../../components/GitHubRepo';
 
 export default function Glitter() {
 	return (
