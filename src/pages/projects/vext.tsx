@@ -26,6 +26,8 @@ export default function Vext() {
 						Vext proves, that being lightweight doesn't have to be a sacrifice
 						for UX.
 					</Code>
+					<Code>ideas:</Code>
+					<Code>status bar, plugin api for vext</Code>
 					<Code>i hope to have it finished by the end of summer 2021</Code>
 
 					<GitHubRepo repo="Milo123459/vext" />

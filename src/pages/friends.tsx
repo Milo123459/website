@@ -45,7 +45,7 @@ export default function Friends() {
 							noPre={true}
 							colour="pink"
 						>
-                            SmolNoBeany
+							SmolNoBeany
 						</CodeLink>{' '}
 						- cool guy, been just a great guy to speak to!
 					</Code>
