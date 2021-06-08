@@ -4,6 +4,7 @@ import Code from '../components/Code';
 import CodeLink from '../components/CodeLink';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { EventsResponse } from '../typings/EventsResponse';
+import { Item } from '../typings/SearchResponse';
 
 const client = new QueryClient();
 
@@ -16,6 +17,10 @@ export default function Recent() {
 					<Code>recent commits</Code>
 					<QueryClientProvider client={client}>
 						<Commits />
+					</QueryClientProvider>
+					<Code>recent merged prs</Code>
+					<QueryClientProvider client={client}>
+						<PRs />
 					</QueryClientProvider>
 				</div>
 			</main>
@@ -47,7 +52,7 @@ function Commits() {
 		<>
 			{data.map((value) => (
 				<Code>
-					pushed commit{' '}
+					commit{' '}
 					<CodeLink
 						link={value.payload.commits[0].url
 							.replace(/api./i, '')
@@ -66,6 +71,47 @@ function Commits() {
 						colour="pink"
 					>
 						{value.repo.name}
+					</CodeLink>
+				</Code>
+			))}
+		</>
+	);
+}
+
+function PRs() {
+	const { isLoading, error, data } = useQuery('recentPRs', async () => {
+		const data = await (
+			await fetch(
+				'https://api.github.com/search/issues?q=is:pr%20author:Milo123459%20archived:false%20is:merged'
+			)
+		).json();
+		const usable: Array<Item> = data.items.slice(0, 5);
+		return usable;
+	});
+
+	if (isLoading) {
+		return <Code>give me a minute im loading stuff</Code>;
+	}
+	if (error) {
+		return <Code>i errored {(error as { message: string }).message} </Code>;
+	}
+	return (
+		<>
+			{data.map((value) => (
+				<Code>
+					pr{' '}
+					<CodeLink link={value.html_url} noPre={true} colour="pink">
+						#{value.number} (<b>{value.title}</b>)
+					</CodeLink>{' '}
+					in{' '}
+					<CodeLink
+						link={`${value.repository_url
+							.replace('api.', '')
+							.replace('/repos', '')}`}
+						noPre={true}
+						colour="pink"
+					>
+						{value.repository_url.slice(29)}
 					</CodeLink>
 				</Code>
 			))}
