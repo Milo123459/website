@@ -27,7 +27,7 @@ export default function Interests() {
 							v
 						</CodeLink>{' '}
 						- v is a new programming language with a nice syntax that is
-						extremely efficeint
+						extremely efficeint.
 					</Code>
 				</div>
 			</main>
