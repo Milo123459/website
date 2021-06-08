@@ -26,7 +26,7 @@ export default function Interests() {
 						<CodeLink link="https://vlang.io" noPre={true} colour="pink">
 							v
 						</CodeLink>{' '}
-						- v is a new programming language with an amazing syntax.
+						- v is a new programming language with a nice syntax that is extremely efficeint
 					</Code>
 				</div>
 			</main>
