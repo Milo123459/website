@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import 'modern-normalize/modern-normalize.css';
 import React from 'react';
 import Head from 'next/head';
+import 'reflect-metadata';
 
 function MyApp({ Component, pageProps }) {
 	return (
