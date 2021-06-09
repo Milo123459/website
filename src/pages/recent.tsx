@@ -55,7 +55,6 @@ function Commits() {
 		<>
 			{data.map((value) => (
 				<Code>
-					commit{' '}
 					<CodeLink
 						link={value.payload.commits[0].url
 							.replace(/api./i, '')
@@ -102,7 +101,6 @@ function PRs() {
 		<>
 			{data.map((value) => (
 				<Code>
-					pr{' '}
 					<CodeLink link={value.html_url} noPre={true} colour="pink">
 						#{value.number} (<b>{value.title.trim()}</b>)
 					</CodeLink>{' '}
@@ -143,7 +141,6 @@ function Issues() {
 		<>
 			{data.map((value) => (
 				<Code>
-					issue{' '}
 					<CodeLink link={value.html_url} noPre={true} colour="pink">
 						#{value.number} (<b>{value.title.trim()}</b>)
 					</CodeLink>{' '}
