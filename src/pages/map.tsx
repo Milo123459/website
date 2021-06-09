@@ -1,7 +1,6 @@
 import styles from '../styles/Base.module.css';
 import Sidebar from '../components/Sidebar';
 import Code from '../components/Code';
-import CodeLink from '../components/CodeLink';
 
 export default function Map() {
 	return (
