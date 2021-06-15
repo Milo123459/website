@@ -23,8 +23,8 @@ export default function Vext() {
 						they aren&apos;t lightweight.
 					</Code>
 					<Code>
-						Vext proves, that being lightweight doesn&apos;t have to be a sacrifice
-						for UX.
+						Vext proves, that being lightweight doesn&apos;t have to be a
+						sacrifice for UX.
 					</Code>
 					<Code>ideas:</Code>
 					<Code>status bar, plugin api for vext</Code>
