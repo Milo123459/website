@@ -9,7 +9,7 @@ export default function Map() {
 			<main className={styles.main}>
 				<div style={{ paddingLeft: '3%' }}>
 					<Code>
-						i'm a map
+						i&apos;m a map
 						<Code>respect maps please</Code>
 					</Code>
 				</div>

@@ -20,10 +20,10 @@ export default function Vext() {
 					</Code>
 					<Code>
 						I built Vext to solve some problems with code editors. Mostly being,
-						they aren't lightweight.
+						they aren&apos;t lightweight.
 					</Code>
 					<Code>
-						Vext proves, that being lightweight doesn't have to be a sacrifice
+						Vext proves, that being lightweight doesn&apos;t have to be a sacrifice
 						for UX.
 					</Code>
 					<Code>ideas:</Code>

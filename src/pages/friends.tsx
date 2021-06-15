@@ -27,7 +27,7 @@ export default function Friends() {
 						>
 							octocat
 						</CodeLink>{' '}
-						- who isn't friends with this cute guy
+						- who isn&apos;t friends with this cute guy
 					</Code>
 					<Code>
 						<CodeLink

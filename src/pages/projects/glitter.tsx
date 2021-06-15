@@ -15,7 +15,7 @@ export default function Glitter() {
 						under the hood, glitter runs the following git commands: add,
 						commit, pull, push
 					</Code>
-					<Code>if you'd like, you can run git fetch as well</Code>
+					<Code>if you&apos;d like, you can run git fetch as well</Code>
 					<Code>
 						it works without configuration, allowing you to commit to any repo
 						without special config
