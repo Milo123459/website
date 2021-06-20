@@ -23,14 +23,17 @@ export default function Projects() {
 						</CodeLink>
 					</Code>
 					<Code>
+						<CodeLink link="/projects/terminimal" noPre={true} colour="pink">
+							terminimal
+						</CodeLink>{' '}
+						- terminimal is redefining terminals.{' '}
 						<CodeLink
-							link="https://github.com/Milo123459/manny"
+							link="https://github.com/Milo123459/terminimal"
 							noPre={true}
 							colour="pink"
 						>
-							manny
-						</CodeLink>{' '}
-						- manny is a documentation system for the terminal
+							repo
+						</CodeLink>
 					</Code>
 					<Code>
 						<CodeLink link="/projects/glitter" noPre={true} colour="pink">
