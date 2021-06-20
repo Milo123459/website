@@ -12,13 +12,6 @@ export default function Vext() {
 				<div style={{ paddingLeft: '3%' }}>
 					<Code>🤙 Vext is a code editor that lives in the Terminal.</Code>
 					<Code>
-						The way Vext works is the fact it is written in{' '}
-						<CodeLink noPre={true} colour="#4f87c4" link="https://vlang.io">
-							V
-						</CodeLink>{' '}
-						and is natrually memory efficient and fast.
-					</Code>
-					<Code>
 						I built Vext to solve some problems with code editors. Mostly being,
 						they aren&apos;t lightweight.
 					</Code>
