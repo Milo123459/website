@@ -9,6 +9,7 @@ export default function Sidebar() {
 			<CodeLink link="/recent">recent contributions</CodeLink>
 			<CodeLink link="/interests">interests</CodeLink>
 			<CodeLink link="/friends">friends</CodeLink>
+			<CodeLink link="https://github.com/sponsors/Milo123459">sponsor</CodeLink>
 		</div>
 	);
 }
