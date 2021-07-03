@@ -5,10 +5,10 @@ interface Props {
 	colour?: string;
 }
 
-export default function Title(props: Props) {
+export default function Information(props: Props) {
 	return (
-		<h1 style={{ color: props.colour || '#f2ebeb', textAlign: 'center' }}>
+		<h2 style={{ color: props.colour || '#f2ebeb', textAlign: 'center' }}>
 			{props.children}
-		</h1>
+		</h2>
 	);
 }
