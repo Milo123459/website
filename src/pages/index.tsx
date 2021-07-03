@@ -1,17 +1,7 @@
-import Title from '../components/Title';
-import Information from '../components/Information';
-import Link from '../components/Link';
-
 export default function Home() {
 	return (
-		<div>
-			<Title>Oh hey there, welcome.</Title>
-			<Information>
-				I&apos;m{' '}
-				<Link link="https://git.io/milo" colour="pink">
-					Milo.
-				</Link>
-			</Information>
+		<div className="flex justify-center items-center">
+			<p className="text-gray-50">Hello!</p>
 		</div>
 	);
 }
