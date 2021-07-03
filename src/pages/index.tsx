@@ -7,7 +7,7 @@ export default function Home() {
 		<div>
 			<Title>Oh hey there, welcome.</Title>
 			<Information>
-				I'm{' '}
+				I&apos;m{' '}
 				<Link link="https://git.io/milo" colour="pink">
 					Milo.
 				</Link>

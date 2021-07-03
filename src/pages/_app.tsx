@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/tailwind.css';
 import 'modern-normalize/modern-normalize.css';
 import React from 'react';
 import Head from 'next/head';
