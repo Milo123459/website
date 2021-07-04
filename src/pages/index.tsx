@@ -3,7 +3,7 @@ import { Text, Link, Spacer, Container, Loading } from '@geist-ui/react';
 import styles from '../styles/Components.module.css';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { UserInformation } from '../typings/UserResponse';
-import { Twitter, Github, Youtube } from '@geist-ui/react-icons';
+import { Twitter, Github, Youtube, Users } from '@geist-ui/react-icons';
 
 const queryClient = new QueryClient();
 
@@ -34,6 +34,7 @@ export default function Home() {
 				<Link href="https://git.io/milo">
 					<Github />
 				</Link>
+				<Spacer x={0.3} />
 				<b>|</b>
 				<Spacer x={0.3} />
 				<Link href="https://youtube.com/salvagedev">
@@ -41,6 +42,9 @@ export default function Home() {
 				</Link>
 			</Container>
 			<Spacer />
+			<Text h3 b>
+				GitHub information
+			</Text>
 			<QueryClientProvider client={queryClient}>
 				<Stats />
 			</QueryClientProvider>
@@ -61,10 +65,38 @@ function Stats() {
 	}
 	if (error) {
 		return (
-			<Text h2 b color="errorLight">
+			<Text h2 b color="#FF1A1A">
 				Error loading data.
 			</Text>
 		);
 	}
-	return <Text h3 b color="successLight"></Text>;
+	return (
+		<Container>
+			<Users />
+			<Spacer x={0.3} />
+			<Text h4>
+				Followers{' '}
+				<Link
+					className={styles['hover-underline-animation']}
+					href="https://github.com/Milo123459?tab=followers"
+				>
+					<b>{data.followers}</b>
+				</Link>{' '}
+			</Text>
+			<Spacer x={0.3} />
+			&#46;
+			<Spacer x={0.3} />
+			<Users />
+			<Spacer x={0.3} />
+			<Text h4>
+				Following{' '}
+				<Link
+					className={styles['hover-underline-animation']}
+					href="https://github.com/Milo123459?tab=following"
+				>
+					<b>{data.following}</b>
+				</Link>{' '}
+			</Text>
+		</Container>
+	);
 }
