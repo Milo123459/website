@@ -28,14 +28,14 @@ export default function Home() {
 				<Link href="https://twitter.com/salvagedev">
 					<Twitter />
 				</Link>
-				<Spacer x={0.2} />
+				<Spacer x={0.3} />
 				<b>|</b>
-				<Spacer x={0.2} />
+				<Spacer x={0.3} />
 				<Link href="https://git.io/milo">
 					<Github />
 				</Link>
 				<b>|</b>
-				<Spacer x={0.2} />
+				<Spacer x={0.3} />
 				<Link href="https://youtube.com/salvagedev">
 					<Youtube />
 				</Link>
