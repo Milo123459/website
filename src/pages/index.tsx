@@ -18,6 +18,18 @@ export default function Home() {
 					Rust
 				</Link>
 			</Text>
+            <Spacer />
+            <Container>
+            <Link href="https://twitter.com/salvagedev">
+                <Twitter />
+            </Link>
+            <Spacer x={0.2} />
+            <b>|</b>
+            <Spacer x={0.2} />
+            <Link href="https://git.io/milo">
+                <Github />
+            </Link>
+            </Container>
 		</>
 	);
 }
