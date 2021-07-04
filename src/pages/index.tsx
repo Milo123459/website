@@ -75,13 +75,13 @@ function Stats() {
 			<Users />
 			<Spacer x={0.3} />
 			<Text h4>
-				Followers{' '}
 				<Link
 					className={styles['hover-underline-animation']}
 					href="https://github.com/Milo123459?tab=followers"
 				>
 					<b>{data.followers}</b>
 				</Link>{' '}
+				followers
 			</Text>
 			<Spacer x={0.3} />
 			&#46;
@@ -89,13 +89,13 @@ function Stats() {
 			<Users />
 			<Spacer x={0.3} />
 			<Text h4>
-				Following{' '}
 				<Link
 					className={styles['hover-underline-animation']}
 					href="https://github.com/Milo123459?tab=following"
 				>
 					<b>{data.following}</b>
 				</Link>{' '}
+				following
 			</Text>
 		</Container>
 	);
