@@ -1,6 +1,6 @@
-import 'tailwindcss/tailwind.css';
-import '../styles/globals.css';
+import { GeistProvider, CssBaseline, Page } from '@geist-ui/react';
 import 'modern-normalize/modern-normalize.css';
+import 'inter-ui/inter.css';
 import React from 'react';
 import Head from 'next/head';
 
@@ -15,7 +15,12 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<title>Milo123459</title>
 			</Head>
-			<Component {...pageProps} />
+			<GeistProvider>
+				<CssBaseline />
+				<Page dotBackdrop>
+					<Component {...pageProps} />
+				</Page>
+			</GeistProvider>
 		</>
 	);
 }
