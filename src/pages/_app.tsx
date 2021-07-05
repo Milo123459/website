@@ -22,9 +22,13 @@ function MyApp({ Component, pageProps }) {
 			<GeistProvider>
 				<CssBaseline />
 				<Page dotBackdrop>
-					<Breadcrumbs>
+					<Breadcrumbs size="medium">
 						<NextLink href="/">
-							<Breadcrumbs.Item nextLink aria-disabled={route.route == '/'}>
+							<Breadcrumbs.Item
+								nextLink
+								aria-disabled={route.route == '/'}
+								style={{ color: route.route == '/' ? '#333' : '' }}
+							>
 								<Home />
 							</Breadcrumbs.Item>
 						</NextLink>
@@ -32,6 +36,7 @@ function MyApp({ Component, pageProps }) {
 							<Breadcrumbs.Item
 								nextLink
 								aria-disabled={route.route == '/stats'}
+								style={{ color: route.route == '/stats' ? '#333' : '' }}
 							>
 								<TrendingUp />
 							</Breadcrumbs.Item>
