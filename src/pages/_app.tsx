@@ -3,7 +3,7 @@ import 'modern-normalize/modern-normalize.css';
 import 'inter-ui/inter.css';
 import React from 'react';
 import Head from 'next/head';
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import { Home, TrendingUp } from '@geist-ui/react-icons';
 
@@ -24,12 +24,15 @@ function MyApp({ Component, pageProps }) {
 				<Page dotBackdrop>
 					<Breadcrumbs size="medium">
 						<NextLink href="/">
-							<Breadcrumbs.Item aria-disabled={route.route == '/'}>
+							<Breadcrumbs.Item nextLink aria-disabled={route.route == '/'}>
 								<Home />
 							</Breadcrumbs.Item>
 						</NextLink>
 						<NextLink href="/stats">
-							<Breadcrumbs.Item aria-disabled={route.route == '/stats'}>
+							<Breadcrumbs.Item
+								nextLink
+								aria-disabled={route.route == '/stats'}
+							>
 								<TrendingUp />
 							</Breadcrumbs.Item>
 						</NextLink>
