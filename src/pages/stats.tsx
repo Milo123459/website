@@ -10,8 +10,9 @@ const queryClient = new QueryClient();
 export default function Home() {
 	return (
 		<>
-			<Text h3 b>
-				GitHub information
+			<Spacer />
+			<Text h1 b>
+				GitHub stats
 			</Text>
 			<QueryClientProvider client={queryClient}>
 				<Stats />

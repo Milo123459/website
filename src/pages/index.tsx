@@ -6,6 +6,7 @@ import { Twitter, Github, Youtube } from '@geist-ui/react-icons';
 export default function Home() {
 	return (
 		<>
+			<Spacer />
 			<Text h1 b>
 				Hey. I&apos;m Milo.
 			</Text>
