@@ -11,13 +11,13 @@ export default function Home() {
 				Hey. I&apos;m Milo.
 			</Text>
 			<Spacer />
-			<Text h2 b>
+			<Text p>
 				I like to code things, mainly projects using{' '}
 				<Link
 					href="https://rust-lang.org"
 					className={styles['hover-underline-animation']}
 				>
-					Rust
+					<b>Rust</b>
 				</Link>
 			</Text>
 			<Spacer />
