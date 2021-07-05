@@ -1,69 +1,39 @@
-export interface PRSearchResponse {
-	total_count: number;
-	incomplete_results: boolean;
-	items: Item[];
-}
-
-export interface Item {
+export interface GistsInformation {
 	url: string;
-	repository_url: string;
-	labels_url: string;
-	comments_url: string;
-	events_url: string;
-	html_url: string;
-	id: number;
+	forks_url: string;
+	commits_url: string;
+	id: string;
 	node_id: string;
-	number: number;
-	title: string;
-	user: User;
-	labels: Label[];
-	state: State;
-	locked: boolean;
-	assignee: null;
-	assignees: any[];
-	milestone: null;
-	comments: number;
+	git_pull_url: string;
+	git_push_url: string;
+	html_url: string;
+	files: { [key: string]: File };
+	public: boolean;
 	created_at: string;
 	updated_at: string;
-	closed_at: null | string;
-	author_association: AuthorAssociation;
-	active_lock_reason: null;
-	draft: boolean;
-	pull_request: PullRequest;
-	body: string;
-	performed_via_github_app: null;
-	score: number;
+	description: string;
+	comments: number;
+	user: null;
+	comments_url: string;
+	owner: Owner;
+	truncated: boolean;
 }
 
-export enum AuthorAssociation {
-	Contributor = 'CONTRIBUTOR',
-	None = 'NONE',
-	Owner = 'OWNER',
+export interface File {
+	filename: string;
+	type: FileType;
+	language: null | string;
+	raw_url: string;
+	size: number;
 }
 
-export interface Label {
-	id: number;
-	node_id: string;
-	url: string;
-	name: string;
-	color: string;
-	default: boolean;
-	description: null | string;
+export enum FileType {
+	ApplicationRlsServicesXML = 'application/rls-services+xml',
+	TextMarkdown = 'text/markdown',
+	TextPlain = 'text/plain',
 }
 
-export interface PullRequest {
-	url: string;
-	html_url: string;
-	diff_url: string;
-	patch_url: string;
-}
-
-export enum State {
-	Closed = 'closed',
-	Open = 'open',
-}
-
-export interface User {
+export interface Owner {
 	login: Login;
 	id: number;
 	node_id: NodeID;
@@ -80,7 +50,7 @@ export interface User {
 	repos_url: string;
 	events_url: EventsURL;
 	received_events_url: string;
-	type: Type;
+	type: OwnerType;
 	site_admin: boolean;
 }
 
@@ -108,6 +78,6 @@ export enum StarredURL {
 	HTTPSAPIGithubCOMUsersMilo123459StarredOwnerRepo = 'https://api.github.com/users/Milo123459/starred{/owner}{/repo}',
 }
 
-export enum Type {
+export enum OwnerType {
 	User = 'User',
 }
