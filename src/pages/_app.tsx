@@ -5,14 +5,17 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
+import useDarkMode from 'use-dark-mode';
 import { Home, TrendingUp, Inbox, Tv } from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
-	const [themeType, setThemeType] = React.useState('light');
-	const switchThemes = () => {
-		setThemeType((last) => (last === 'dark' ? 'light' : 'dark'));
-	};
+	const [isMounted, setIsMounted] = React.useState(false);
+	const darkMode = useDarkMode(true);
+	const themeType = 'light';
+	React.useEffect(() => {
+		setIsMounted(true);
+	}, []);
 	return (
 		<>
 			<Head>
