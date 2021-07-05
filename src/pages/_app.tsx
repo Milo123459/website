@@ -59,6 +59,15 @@ function MyApp({ Component, pageProps }) {
 								<Tv />
 							</Breadcrumbs.Item>
 						</NextLink>
+						<NextLink href="/notes">
+							<Breadcrumbs.Item
+								nextLink
+								aria-disabled={route.route == '/notes'}
+								style={{ color: route.route == '/notes' ? '#333' : '' }}
+							>
+								NOTEPAD_ICON
+							</Breadcrumbs.Item>
+						</NextLink>
 					</Breadcrumbs>
 					<Component {...pageProps} />
 				</Page>
