@@ -5,7 +5,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
-import { Home, TrendingUp, Inbox } from '@geist-ui/react-icons';
+import { Home, TrendingUp, Inbox, Tv } from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
@@ -48,6 +48,15 @@ function MyApp({ Component, pageProps }) {
 								style={{ color: route.route == '/notifications' ? '#333' : '' }}
 							>
 								<Inbox />
+							</Breadcrumbs.Item>
+						</NextLink>
+						<NextLink href="/tuber">
+							<Breadcrumbs.Item
+								nextLink
+								aria-disabled={route.route == '/tuber'}
+								style={{ color: route.route == '/tuber' ? '#333' : '' }}
+							>
+								<Tv />
 							</Breadcrumbs.Item>
 						</NextLink>
 					</Breadcrumbs>
