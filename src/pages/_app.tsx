@@ -9,6 +9,10 @@ import { Home, TrendingUp, Inbox, Tv } from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
+	const [themeType, setThemeType] = React.useState('light');
+	const switchThemes = () => {
+		setThemeType((last) => (last === 'dark' ? 'light' : 'dark'));
+	};
 	return (
 		<>
 			<Head>
@@ -19,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<title>Milo123459</title>
 			</Head>
-			<GeistProvider>
+			<GeistProvider themeType={themeType}>
 				<CssBaseline />
 				<Page dotBackdrop>
 					<Breadcrumbs size="medium">
