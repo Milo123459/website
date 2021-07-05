@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 			<GeistProvider>
 				<CssBaseline />
 				<Page dotBackdrop>
-					<Breadcrumbs size="medium">
+					<Breadcrumbs>
 						<NextLink href="/">
 							<Breadcrumbs.Item nextLink aria-disabled={route.route == '/'}>
 								<Home />
