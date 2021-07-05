@@ -1,10 +1,14 @@
-import { GeistProvider, CssBaseline, Page } from '@geist-ui/react';
+import { GeistProvider, CssBaseline, Page, Breadcrumbs } from '@geist-ui/react';
 import 'modern-normalize/modern-normalize.css';
 import 'inter-ui/inter.css';
 import React from 'react';
 import Head from 'next/head';
+import router, { useRouter } from 'next/router';
+import NextLink from 'next/link';
+import { Home, TrendingUp } from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
+	const route = useRouter();
 	return (
 		<>
 			<Head>
@@ -18,6 +22,18 @@ function MyApp({ Component, pageProps }) {
 			<GeistProvider>
 				<CssBaseline />
 				<Page dotBackdrop>
+					<Breadcrumbs size="medium">
+						<NextLink href="/">
+							<Breadcrumbs.Item aria-disabled={route.route == '/'}>
+								<Home />
+							</Breadcrumbs.Item>
+						</NextLink>
+						<NextLink href="/stats">
+							<Breadcrumbs.Item aria-disabled={route.route == '/stats'}>
+								<TrendingUp />
+							</Breadcrumbs.Item>
+						</NextLink>
+					</Breadcrumbs>
 					<Component {...pageProps} />
 				</Page>
 			</GeistProvider>
