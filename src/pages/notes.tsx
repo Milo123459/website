@@ -12,7 +12,7 @@ export default function Notes() {
 				Introducing <b>Notes</b>
 			</Text>
 			<Text p>
-				<b>Notes</b> is an in-browser note taking app, with the power to sync
+				<b>Notes</b> is a in-browser note taking app, with the power to sync
 				with a GitHub repo.
 			</Text>
 			<Text p b>
