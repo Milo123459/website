@@ -14,7 +14,15 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import useDarkMode from 'use-dark-mode';
-import { Home, TrendingUp, Inbox, Tv, AtSign } from '@geist-ui/react-icons';
+import {
+	Home,
+	TrendingUp,
+	Inbox,
+	Tv,
+	AtSign,
+	Book,
+	BookOpen,
+} from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
@@ -89,6 +97,15 @@ function MyApp({ Component, pageProps }) {
 									style={{ color: route.route == '/atchat' ? '#333' : '' }}
 								>
 									<AtSign />
+								</Breadcrumbs.Item>
+							</NextLink>
+							<NextLink href="/projects">
+								<Breadcrumbs.Item
+									nextLink
+									aria-disabled={route.route == '/projects'}
+									style={{ color: route.route == '/projects' ? '#333' : '' }}
+								>
+									{route.route == '/projects' ? <BookOpen /> : <Book />}
 								</Breadcrumbs.Item>
 							</NextLink>
 						</Breadcrumbs>
