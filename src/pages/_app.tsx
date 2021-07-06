@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/'}
-									style={{ color: route.route == '/' ? '#333' : '' }}
+									style={{ color: route.route == '/' ? '#59a1f7' : '' }}
 								>
 									<Home />
 								</Breadcrumbs.Item>
@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/stats'}
-									style={{ color: route.route == '/stats' ? '#333' : '' }}
+									style={{ color: route.route == '/stats' ? '#59a1f7' : '' }}
 								>
 									<TrendingUp />
 								</Breadcrumbs.Item>
@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/notifications'}
 									style={{
-										color: route.route == '/notifications' ? '#333' : '',
+										color: route.route == '/notifications' ? '#59a1f7' : '',
 									}}
 								>
 									<Inbox />
@@ -76,7 +76,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/tuber'}
-									style={{ color: route.route == '/tuber' ? '#333' : '' }}
+									style={{ color: route.route == '/tuber' ? '#59a1f7' : '' }}
 								>
 									<Tv />
 								</Breadcrumbs.Item>
@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/notes'}
-									style={{ color: route.route == '/notes' ? '#333' : '' }}
+									style={{ color: route.route == '/notes' ? '#59a1f7' : '' }}
 								>
 									NOTEPAD_ICON
 								</Breadcrumbs.Item>
@@ -94,7 +94,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/atchat'}
-									style={{ color: route.route == '/atchat' ? '#333' : '' }}
+									style={{ color: route.route == '/atchat' ? '#59a1f7' : '' }}
 								>
 									<AtSign />
 								</Breadcrumbs.Item>
@@ -103,7 +103,7 @@ function MyApp({ Component, pageProps }) {
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/projects'}
-									style={{ color: route.route == '/projects' ? '#333' : '' }}
+									style={{ color: route.route == '/projects' ? '#59a1f7' : '' }}
 								>
 									{route.route == '/projects' ? <BookOpen /> : <Book />}
 								</Breadcrumbs.Item>
