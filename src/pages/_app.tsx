@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
 				<CssBaseline />
 				<Page dotBackdrop>
 					<Container>
-						<Breadcrumbs>
+						<Breadcrumbs size="medium">
 							<NextLink href="/">
 								<Breadcrumbs.Item
 									nextLink
