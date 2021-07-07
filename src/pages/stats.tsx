@@ -1,8 +1,16 @@
 import React from 'react';
-import { Text, Link, Spacer, Container, Loading } from '@geist-ui/react';
+import {
+	Text,
+	Link,
+	Spacer,
+	Container,
+	Loading,
+	Progress,
+} from '@geist-ui/react';
 import styles from '../styles/Components.module.css';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { UserInformation } from '../typings/UserResponse';
+import { LanguagesResponse } from '../typings/WakatimeResponse';
 import { Users } from '@geist-ui/react-icons';
 
 const queryClient = new QueryClient();
@@ -15,14 +23,21 @@ export default function Home() {
 				GitHub stats
 			</Text>
 			<QueryClientProvider client={queryClient}>
-				<Stats />
+				<GitHubStats />
+			</QueryClientProvider>
+			<Spacer />
+			<Text h1 b>
+				WakaTime stats
+			</Text>
+			<QueryClientProvider client={queryClient}>
+				<WakatimeStats />
 			</QueryClientProvider>
 		</>
 	);
 }
 
-function Stats() {
-	const { isLoading, error, data } = useQuery('stats', async () => {
+function GitHubStats() {
+	const { isLoading, error, data } = useQuery('githubstats', async () => {
 		const data = await (
 			await fetch('https://api.github.com/users/Milo123459')
 		).json();
@@ -67,5 +82,36 @@ function Stats() {
 				following
 			</Text>
 		</Container>
+	);
+}
+
+function WakatimeStats() {
+	const { isLoading, error, data } = useQuery('wakatimestats', async () => {
+		const data = await (
+			await fetch(
+				'https://wakatime.com/share/@salvage_dev/ba2cd6a0-51c4-4f64-8856-6a2f4dfcf18c.json'
+			)
+		).json();
+		return data as LanguagesResponse;
+	});
+
+	if (isLoading) {
+		return <Loading>Loading</Loading>;
+	}
+	if (error) {
+		return (
+			<Text h2 b color="#FF1A1A">
+				Error loading data.
+			</Text>
+		);
+	}
+	return (
+		<div>
+			{data.data.map((value, index) => (
+				<Progress key={index} value={value.percent} color={value.color}>
+					{value.name}
+				</Progress>
+			))}
+		</div>
 	);
 }
