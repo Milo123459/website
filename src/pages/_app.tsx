@@ -37,6 +37,12 @@ function MyApp({ Component, pageProps }) {
 					content="Welcome to Milo's personal website. Here is the home of where I write about projects, and where you can learn more about me."
 				/>
 				<title>Milo123459</title>
+				<script
+					async
+					defer
+					data-website-id="98ca0a08-5a8f-4acb-bba2-aca57008f14a"
+					src="https://786df2a5c434.up.railway.app/umami.js"
+				></script>
 			</Head>
 			<GeistProvider themeType={themeType}>
 				<CssBaseline />
