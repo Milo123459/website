@@ -123,7 +123,13 @@ function MyApp({ Component, pageProps }) {
 							</NextLink>
 						</Breadcrumbs>
 						<Spacer x={0.5} />
-						<Select initialValue={themeType} onChange={darkMode.toggle}>
+						<Select
+							initialValue={themeType}
+							onChange={(value) => {
+								if (value == 'light') darkMode.enable();
+								else darkMode.disable();
+							}}
+						>
 							<Select.Option value="light">Light</Select.Option>
 							<Select.Option value="dark">Dark</Select.Option>
 						</Select>
