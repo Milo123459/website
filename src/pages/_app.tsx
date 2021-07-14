@@ -128,6 +128,7 @@ function MyApp({ Component, pageProps }) {
 							onChange={(value) => {
 								if (value == 'light') darkMode.enable();
 								else darkMode.disable();
+                                // This fixes a bug where you could click the light mode button, if you were on light mode and it'd change to darkmode, then if you clicked darkmode whilst on darkmode it'd change to light
 							}}
 						>
 							<Select.Option value="light">Light</Select.Option>
