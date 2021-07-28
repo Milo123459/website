@@ -18,6 +18,9 @@ export default function Tuber() {
 			<Text p b>
 				Coming soon.
 			</Text>
+			<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+				<Text>Demo</Text>
+			</a>
 		</>
 	);
 }
