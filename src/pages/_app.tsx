@@ -37,12 +37,6 @@ function MyApp({ Component, pageProps }) {
 					content="Welcome to Milo's personal website. Here is the home of where I write about projects, and where you can learn more about me."
 				/>
 				<title>Milo123459</title>
-				<script
-					async
-					defer
-					data-website-id="98ca0a08-5a8f-4acb-bba2-aca57008f14a"
-					src="https://786df2a5c434.up.railway.app/umami.js"
-				></script>
 			</Head>
 			<GeistProvider themeType={themeType}>
 				<CssBaseline />
@@ -54,7 +48,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/'}
 									style={{ color: route.route == '/' ? '#59a1f7' : '' }}
-									className="umami--click--go-home"
 								>
 									<Home />
 								</Breadcrumbs.Item>
@@ -64,7 +57,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/stats'}
 									style={{ color: route.route == '/stats' ? '#59a1f7' : '' }}
-									className="umami--click--go-stats"
 								>
 									<TrendingUp />
 								</Breadcrumbs.Item>
@@ -76,7 +68,6 @@ function MyApp({ Component, pageProps }) {
 									style={{
 										color: route.route == '/notifications' ? '#59a1f7' : '',
 									}}
-									className="umami--click--go-notifications"
 								>
 									<Inbox />
 								</Breadcrumbs.Item>
@@ -86,7 +77,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/tuber'}
 									style={{ color: route.route == '/tuber' ? '#59a1f7' : '' }}
-									className="umami--click--go-tuber"
 								>
 									<Tv />
 								</Breadcrumbs.Item>
@@ -96,7 +86,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/notes'}
 									style={{ color: route.route == '/notes' ? '#59a1f7' : '' }}
-									className="umami--click--go-notes"
 								>
 									NOTEPAD_ICON
 								</Breadcrumbs.Item>
@@ -106,7 +95,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/atchat'}
 									style={{ color: route.route == '/atchat' ? '#59a1f7' : '' }}
-									className="umami--click--go-atchat"
 								>
 									<AtSign />
 								</Breadcrumbs.Item>
@@ -116,7 +104,6 @@ function MyApp({ Component, pageProps }) {
 									nextLink
 									aria-disabled={route.route == '/projects'}
 									style={{ color: route.route == '/projects' ? '#59a1f7' : '' }}
-									className="umami--click--go-projects"
 								>
 									{route.route == '/projects' ? <BookOpen /> : <Book />}
 								</Breadcrumbs.Item>
