@@ -54,6 +54,7 @@ export default function Home() {
 								</Link>
 							</NextLink>{' '}
 							- A fast and simple way of sharing code, deployable in one click.
+							<Spacer />
 							<NextLink href="/tabber" passHref>
 								<Link icon color>
 									Tabber
