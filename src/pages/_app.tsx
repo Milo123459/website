@@ -17,8 +17,8 @@ function MyApp({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<meta property="og:title" content="Mystery" />
-				<meta property="og:description" content="Mystery" />
+				<meta property="og:title" content="Milo" />
+				<meta property="og:description" content="Milo's website, to show off some cool things!" />
 				<title>Milo123459</title>
 			</Head>
 			<GeistProvider themeType="dark">
