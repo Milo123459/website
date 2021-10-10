@@ -1,49 +1,33 @@
+import 'modern-normalize/modern-normalize.css';
+import Head from 'next/head';
+import 'inter-ui/inter.css';
 import {
 	GeistProvider,
 	CssBaseline,
 	Page,
 	Breadcrumbs,
-	Select,
-	Container,
-	Spacer,
+	Grid,
 } from '@geist-ui/react';
-import 'modern-normalize/modern-normalize.css';
-import 'inter-ui/inter.css';
-import React from 'react';
-import Head from 'next/head';
+import Link from 'next/link';
+import { Home } from '@geist-ui/react-icons';
 import { useRouter } from 'next/router';
-import NextLink from 'next/link';
-import useDarkMode from 'use-dark-mode';
-import {
-	Home,
-	TrendingUp,
-	Inbox,
-	Tv,
-	AtSign,
-	Book,
-	BookOpen,
-} from '@geist-ui/react-icons';
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
-	const darkMode = useDarkMode(true);
-	const themeType = darkMode.value == true ? 'light' : 'dark';
 	return (
 		<>
 			<Head>
-				<meta property="og:title" content="Milo123459" />
-				<meta
-					property="og:description"
-					content="Welcome to Milo's personal website. Here is the home of where I write about projects, and where you can learn more about me."
-				/>
+				<meta property="og:title" content="Mystery" />
+				<meta property="og:description" content="Mystery" />
 				<title>Milo123459</title>
 			</Head>
-			<GeistProvider themeType={themeType}>
+			<GeistProvider themeType="dark">
 				<CssBaseline />
+
 				<Page dotBackdrop>
-					<Container>
-						<Breadcrumbs size="medium">
-							<NextLink href="/">
+					<Grid.Container>
+						<Breadcrumbs>
+							<Link href="/" passHref>
 								<Breadcrumbs.Item
 									nextLink
 									aria-disabled={route.route == '/'}
@@ -51,77 +35,9 @@ function MyApp({ Component, pageProps }) {
 								>
 									<Home />
 								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/stats">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/stats'}
-									style={{ color: route.route == '/stats' ? '#59a1f7' : '' }}
-								>
-									<TrendingUp />
-								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/notifications">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/notifications'}
-									style={{
-										color: route.route == '/notifications' ? '#59a1f7' : '',
-									}}
-								>
-									<Inbox />
-								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/tuber">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/tuber'}
-									style={{ color: route.route == '/tuber' ? '#59a1f7' : '' }}
-								>
-									<Tv />
-								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/notes">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/notes'}
-									style={{ color: route.route == '/notes' ? '#59a1f7' : '' }}
-								>
-									NOTEPAD_ICON
-								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/atchat">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/atchat'}
-									style={{ color: route.route == '/atchat' ? '#59a1f7' : '' }}
-								>
-									<AtSign />
-								</Breadcrumbs.Item>
-							</NextLink>
-							<NextLink href="/projects">
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/projects'}
-									style={{ color: route.route == '/projects' ? '#59a1f7' : '' }}
-								>
-									{route.route == '/projects' ? <BookOpen /> : <Book />}
-								</Breadcrumbs.Item>
-							</NextLink>
+							</Link>
 						</Breadcrumbs>
-						<Spacer x={0.5} />
-						<Select
-							initialValue={themeType}
-							onChange={(value) => {
-								if (value == 'light') darkMode.enable();
-								else darkMode.disable();
-								// This fixes a bug where you could click the light mode button, if you were on light mode and it'd change to darkmode, then if you clicked darkmode whilst on darkmode it'd change to light
-							}}
-						>
-							<Select.Option value="light">Light</Select.Option>
-							<Select.Option value="dark">Dark</Select.Option>
-						</Select>
-					</Container>
+					</Grid.Container>
 					<Component {...pageProps} />
 				</Page>
 			</GeistProvider>
