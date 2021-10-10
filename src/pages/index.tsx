@@ -53,7 +53,14 @@ export default function Home() {
 									Snippeter
 								</Link>
 							</NextLink>{' '}
-							- A fast and simple way of sharing code, deployable in one click
+							- A fast and simple way of sharing code, deployable in one click.
+							<NextLink href="/tabber" passHref>
+								<Link icon color>
+									Tabber
+								</Link>
+							</NextLink>{' '}
+							- A beautiful, yet fake operating system for the browser. Fine
+							tuned for developers.
 						</Text>
 					</Modal.Content>
 					<Modal.Action passive onClick={() => setPlanningState(false)}>

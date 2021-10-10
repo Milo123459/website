@@ -28,5 +28,3 @@ jobs:
       - run: yarn
       - run: yarn next lint
       - run: yarn prettier -c .
-
-      # Runs a single command using the runners shell

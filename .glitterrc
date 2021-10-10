@@ -1,0 +1,20 @@
+{
+    "custom_tasks": [
+        {
+            "name": "fmt",
+            "execute": [
+                "yarn prettier --write ."
+            ]
+        },
+        {
+            "name": "lint",
+            "execute": [
+                "yarn next lint"
+            ]
+        }
+    ],
+    "hooks": [
+        "fmt",
+        "lint"
+    ]
+}

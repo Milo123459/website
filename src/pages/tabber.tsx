@@ -1,12 +1,13 @@
 import { Text, Spacer, Grid, Card } from '@geist-ui/react';
 
-export default function Snippeter() {
+export default function Tabber() {
 	return (
 		<>
 			<Spacer />
-			<Text h1>Snippeter</Text>
+			<Text h1>Tabber</Text>
 			<Text h3>
-				A fast and simple way of sharing code, deployable in one click
+				A beautiful, yet fake operating system for the browser. Fine tuned for
+				developers.
 			</Text>
 			<Text h6>FEATURES</Text>
 			<Grid.Container>
@@ -15,15 +16,11 @@ export default function Snippeter() {
 				</Grid>
 				<Spacer />
 				<Grid>
-					<Card>Share snippets, or whole files</Card>
+					<Card>&quot;Apps&quot; built for developers</Card>
 				</Grid>
 				<Spacer />
 				<Grid>
-					<Card>File statistics</Card>
-				</Grid>
-				<Spacer />
-				<Grid>
-					<Card>Search snippets to find helpful code</Card>
+					<Card>Simple, minimalistic UI</Card>
 				</Grid>
 			</Grid.Container>
 			<Spacer />
