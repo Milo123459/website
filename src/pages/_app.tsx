@@ -7,6 +7,7 @@ import {
 	Page,
 	Breadcrumbs,
 	Grid,
+	Spacer,
 } from '@geist-ui/react';
 import Link from 'next/link';
 import { Home, Activity } from '@geist-ui/react-icons';
@@ -71,6 +72,7 @@ function MyApp({ Component, pageProps }) {
 							})}
 						</Breadcrumbs>
 					</Grid.Container>
+					<Spacer />
 					<Component {...pageProps} />
 				</Page>
 			</GeistProvider>
