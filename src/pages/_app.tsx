@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }) {
 							{breadcrumbs.map((breadcrumb, index) => {
 								return (
 									<Fragment key={index}>
-										<Link href={breadcrumb.href}>
+										<Link href={breadcrumb.href} passHref>
 											<Breadcrumbs.Item
 												nextLink
 												aria-disabled={route.route == breadcrumb.href}
