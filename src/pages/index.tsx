@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<>
 			<Spacer />
-			<Text h1>Hey - I&apos;m Milo</Text>
+			<Text h1>Hey! I&apos;m Milo</Text>
 			<Text h3>I like to program things.</Text>
 			<Grid.Container>
 				<OpenSourceProjects />

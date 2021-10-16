@@ -48,7 +48,6 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 			<GeistProvider themeType="dark">
 				<CssBaseline />
-
 				<Page dotBackdrop>
 					<Grid.Container>
 						<Breadcrumbs>
