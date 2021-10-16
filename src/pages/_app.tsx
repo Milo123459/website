@@ -9,8 +9,30 @@ import {
 	Grid,
 } from '@geist-ui/react';
 import Link from 'next/link';
-import { Home } from '@geist-ui/react-icons';
+import { Home, Activity } from '@geist-ui/react-icons';
 import { useRouter } from 'next/router';
+import { Fragment } from 'react';
+
+interface Props extends React.SVGProps<SVGElement> {
+	color?: string;
+	size?: number | string;
+}
+
+interface Breadcrumb {
+	href: string;
+	icon: React.FunctionComponent<Props>;
+}
+
+const breadcrumbs: Breadcrumb[] = [
+	{
+		href: '/',
+		icon: Home,
+	},
+	{
+		href: '/stalk',
+		icon: Activity,
+	},
+];
 
 function MyApp({ Component, pageProps }) {
 	const route = useRouter();
@@ -30,15 +52,24 @@ function MyApp({ Component, pageProps }) {
 				<Page dotBackdrop>
 					<Grid.Container>
 						<Breadcrumbs>
-							<Link href="/" passHref>
-								<Breadcrumbs.Item
-									nextLink
-									aria-disabled={route.route == '/'}
-									style={{ color: route.route == '/' ? '#59a1f7' : '' }}
-								>
-									<Home />
-								</Breadcrumbs.Item>
-							</Link>
+							{breadcrumbs.map((breadcrumb, index) => {
+								return (
+									<Fragment key={index}>
+										<Link href={breadcrumb.href}>
+											<Breadcrumbs.Item
+												nextLink
+												aria-disabled={route.route == breadcrumb.href}
+												style={{
+													color:
+														route.route == breadcrumb.href ? '#59a1f7' : '',
+												}}
+											>
+												<breadcrumb.icon />
+											</Breadcrumbs.Item>
+										</Link>
+									</Fragment>
+								);
+							})}
 						</Breadcrumbs>
 					</Grid.Container>
 					<Component {...pageProps} />

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { Button, Modal, Text, Spacer, Link } from '@geist-ui/react';
 import NextLink from 'next/link';
 import { X } from '@geist-ui/react-icons';
@@ -41,7 +41,7 @@ export default function OpenSourceProjects() {
 					<Text>
 						{projects.map((project, index) => {
 							return (
-								<div key={index}>
+								<Fragment key={index}>
 									<NextLink href={project.link} passHref>
 										<Link icon color>
 											{project.name}
@@ -49,7 +49,7 @@ export default function OpenSourceProjects() {
 									</NextLink>{' '}
 									- {project.description}
 									{index == projects.length - 1 ? null : <Spacer />}
-								</div>
+								</Fragment>
 							);
 						})}
 					</Text>
