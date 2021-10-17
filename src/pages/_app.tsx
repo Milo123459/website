@@ -58,10 +58,10 @@ function MyApp({ Component, pageProps }) {
 										<Link href={breadcrumb.href} passHref>
 											<Breadcrumbs.Item
 												nextLink
-												aria-disabled={route.route == breadcrumb.href}
+												aria-disabled={route.route === breadcrumb.href}
 												style={{
 													color:
-														route.route == breadcrumb.href ? '#59a1f7' : '',
+														route.route === breadcrumb.href ? '#59a1f7' : '',
 												}}
 											>
 												<breadcrumb.icon />

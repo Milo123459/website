@@ -48,7 +48,7 @@ export default function OpenSourceProjects() {
 										</Link>
 									</NextLink>{' '}
 									- {project.description}
-									{index == projects.length - 1 ? null : <Spacer />}
+									{index === projects.length - 1 ? null : <Spacer />}
 								</Fragment>
 							);
 						})}
