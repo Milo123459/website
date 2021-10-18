@@ -1,7 +1,7 @@
 import { Home } from '@geist-ui/react-icons';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import Link from 'next/link';
-import { Breadcrumbs, Grid, Button } from '@geist-ui/react';
+import { Breadcrumbs, Grid } from '@geist-ui/react';
 import { useRouter } from 'next/router';
 
 interface Props extends React.SVGProps<SVGElement> {

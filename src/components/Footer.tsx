@@ -9,19 +9,19 @@ export default function Footer() {
 			<Spacer />
 			<Grid.Container justify="center">
 				<Grid>
-					<Link href="https://twitter.com/salvagedev">
+					<Link passHref href="https://twitter.com/salvagedev">
 						<Twitter />
 					</Link>
 				</Grid>
 				<Spacer />
 				<Grid>
-					<Link href="https://youtube.com/salvagedev">
+					<Link passHref href="https://youtube.com/salvagedev">
 						<Youtube />
 					</Link>
 				</Grid>
 				<Spacer />
 				<Grid>
-					<Link href="https://github.com/Milo123459">
+					<Link passHref href="https://github.com/Milo123459">
 						<Github />
 					</Link>
 				</Grid>

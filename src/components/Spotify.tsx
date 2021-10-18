@@ -20,6 +20,7 @@ export default function NowPlaying() {
 						<>
 							<Text h5>{'Listening to -'} &nbsp;</Text>
 							<Link
+								passHref
 								href={`https://open.spotify.com/track/${
 									status.spotify!.track_id
 								}`}

@@ -1,7 +1,7 @@
 import { Themes } from '@geist-ui/react';
 
 const moilo = Themes.createFromDark({
-	type: 'Moilo',
+	type: 'DarkPlus',
 	palette: {
 		accents_1: '#111',
 		accents_2: '#333',
