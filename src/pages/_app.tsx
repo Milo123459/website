@@ -10,8 +10,7 @@ import {
 	Spacer,
 } from '@geist-ui/react';
 import Link from 'next/link';
-import Spotify from '../components/Spotify';
-import { Home, Twitter, Youtube, Github } from '@geist-ui/react-icons';
+import { Home } from '@geist-ui/react-icons';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
@@ -71,30 +70,6 @@ function MyApp({ Component, pageProps }) {
 					</Grid.Container>
 					<Spacer />
 					<Component {...pageProps} />
-					<footer>
-						<Spacer />
-						<Grid.Container>
-							<Grid>
-								<Link href="https://twitter.com/salvagedev">
-									<Twitter />
-								</Link>
-							</Grid>
-							<Spacer />
-							<Grid>
-								<Link href="https://youtube.com/salvagedev">
-									<Youtube />
-								</Link>
-							</Grid>
-							<Spacer />
-							<Grid>
-								<Link href="https://github.com/Milo123459">
-									<Github />
-								</Link>
-							</Grid>
-							<Spacer />
-						</Grid.Container>
-						<Spotify />
-					</footer>
 				</Page>
 			</GeistProvider>
 		</>
