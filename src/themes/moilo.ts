@@ -1,6 +1,4 @@
-import {
-	Themes,
-} from '@geist-ui/react';
+import { Themes } from '@geist-ui/react';
 
 const moilo = Themes.createFromDark({
 	type: 'Moilo',

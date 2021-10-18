@@ -15,7 +15,6 @@ import Footer from '../components/Footer';
 import '../css/globals.css';
 import moilo from '../themes/moilo';
 
-
 function MyApp({ Component, pageProps }) {
 	const [themeType] = useState('dark');
 	return (
@@ -27,7 +26,7 @@ function MyApp({ Component, pageProps }) {
 					<NavBreadCrumb />
 					<Spacer />
 					<Component {...pageProps} />
-						<Footer /> 
+					<Footer />
 				</Page>
 			</GeistProvider>
 		</>

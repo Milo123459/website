@@ -9,7 +9,6 @@ interface Props extends React.SVGProps<SVGElement> {
 	size?: number | string;
 }
 
-
 interface Breadcrumb {
 	href: string;
 	icon: React.FunctionComponent<Props>;
@@ -22,31 +21,29 @@ const breadcrumbs: Breadcrumb[] = [
 	},
 ];
 
-
 export default function NavBreadCrumb() {
 	const route = useRouter();
 	return (
 		<>
 			<Grid.Container justify="center">
 				<Breadcrumbs>
-				{breadcrumbs.map((breadcrumb, index) => {
-								return (
-									<Fragment key={index}>
-										<Link href={breadcrumb.href} passHref>
-											<Breadcrumbs.Item
-												nextLink
-												aria-disabled={route.route === breadcrumb.href}
-												style={{
-													color:
-														route.route === breadcrumb.href ? '#59a1f7' : '',
-												}}
-											>
-												<breadcrumb.icon />
-											</Breadcrumbs.Item>
-										</Link>
-									</Fragment>
-								);
-							})}
+					{breadcrumbs.map((breadcrumb, index) => {
+						return (
+							<Fragment key={index}>
+								<Link href={breadcrumb.href} passHref>
+									<Breadcrumbs.Item
+										nextLink
+										aria-disabled={route.route === breadcrumb.href}
+										style={{
+											color: route.route === breadcrumb.href ? '#59a1f7' : '',
+										}}
+									>
+										<breadcrumb.icon />
+									</Breadcrumbs.Item>
+								</Link>
+							</Fragment>
+						);
+					})}
 				</Breadcrumbs>
 			</Grid.Container>
 		</>
