@@ -3,29 +3,50 @@ import { Fragment, useState } from 'react';
 import Link from 'next/link';
 import { Breadcrumbs, Grid, Button } from '@geist-ui/react';
 import { useRouter } from 'next/router';
+
+interface Props extends React.SVGProps<SVGElement> {
+	color?: string;
+	size?: number | string;
+}
+
+
+interface Breadcrumb {
+	href: string;
+	icon: React.FunctionComponent<Props>;
+}
+
+const breadcrumbs: Breadcrumb[] = [
+	{
+		href: '/',
+		icon: Home,
+	},
+];
+
+
 export default function NavBreadCrumb() {
-	const [themeType, setThemeType] = useState('light');
-	const switchThemes = () => {
-		setThemeType((last) => (last === 'dark' ? 'light' : 'dark'));
-	};
 	const route = useRouter();
 	return (
 		<>
 			<Grid.Container justify="center">
 				<Breadcrumbs>
-					<Fragment key={0}>
-						<Link href={'/'} passHref>
-							<Breadcrumbs.Item
-								nextLink
-								aria-disabled={route.route === '/'}
-								style={{
-									color: route.route === '/' ? '#59a1f7' : '',
-								}}
-							>
-								<Home />
-							</Breadcrumbs.Item>
-						</Link>
-					</Fragment>
+				{breadcrumbs.map((breadcrumb, index) => {
+								return (
+									<Fragment key={index}>
+										<Link href={breadcrumb.href} passHref>
+											<Breadcrumbs.Item
+												nextLink
+												aria-disabled={route.route === breadcrumb.href}
+												style={{
+													color:
+														route.route === breadcrumb.href ? '#59a1f7' : '',
+												}}
+											>
+												<breadcrumb.icon />
+											</Breadcrumbs.Item>
+										</Link>
+									</Fragment>
+								);
+							})}
 				</Breadcrumbs>
 			</Grid.Container>
 		</>
