@@ -11,11 +11,13 @@
 	"dependencies": {
 		"@geist-ui/react": "^2.2.0",
 		"@geist-ui/react-icons": "^1.0.1",
+		"framer-motion": "^4.1.17",
 		"inter-ui": "^3.19.3",
 		"modern-normalize": "^1.1.0",
 		"next": "^11.1.0",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
+		"react-is": "^17.0.2",
 		"react-query": "^3.27.0",
 		"react-use-lanyard": "^0.1.0"
 	},

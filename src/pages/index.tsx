@@ -1,41 +1,55 @@
-import { Text, Grid, Spacer } from '@geist-ui/react';
-import { Twitter, Youtube, Github } from '@geist-ui/react-icons';
+import { Text, Grid } from '@geist-ui/react';
+import { motion } from 'framer-motion';
 import OpenSourceProjects from '../components/OpenSourceProjects';
-import Spotify from '../components/Spotify';
-import Link from 'next/link';
 
 export default function Home() {
 	return (
 		<>
-			<Text h1>Hey! I&apos;m Milo</Text>
-			<Text p>I like to program things</Text>
+			<Grid.Container justify="center">
+				<motion.div
+					initial="hidden"
+					animate="visible"
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.4,
+							},
+						},
+					}}
+				>
+					<Text h1>Hey! &nbsp;I&apos;m Milo 👋</Text>
+				</motion.div>
+			</Grid.Container>
+			<Grid.Container justify="center">
+				<motion.div
+					initial="hidden"
+					animate="visible"
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.8,
+							},
+						},
+					}}
+				>
+					<Text p>I like to program things</Text>
+				</motion.div>
+			</Grid.Container>
 			<Grid.Container>
 				<OpenSourceProjects />
 			</Grid.Container>
-			<footer>
-				<Spacer />
-				<Grid.Container>
-					<Grid>
-						<Link href="https://twitter.com/salvagedev">
-							<Twitter />
-						</Link>
-					</Grid>
-					<Spacer />
-					<Grid>
-						<Link href="https://youtube.com/salvagedev">
-							<Youtube />
-						</Link>
-					</Grid>
-					<Spacer />
-					<Grid>
-						<Link href="https://github.com/Milo123459">
-							<Github />
-						</Link>
-					</Grid>
-					<Spacer />
-				</Grid.Container>
-				<Spotify />
-			</footer>
 		</>
 	);
 }

@@ -1,5 +1,4 @@
-import { Spinner, Text, Grid, Spacer } from '@geist-ui/react';
-import { Music } from '@geist-ui/react-icons';
+import { Spinner, Text, Grid, Spacer, Avatar } from '@geist-ui/react';
 import Link from 'next/link';
 import { useLanyard } from 'react-use-lanyard';
 
@@ -8,21 +7,24 @@ export default function NowPlaying() {
 		userId: '450212014912962560',
 		socket: true,
 	});
-
 	return (
-		<Grid.Container>
+		<Grid.Container justify="center">
 			{loading ? (
-				<Spinner />
+				<>
+					<Text h5>{'Listening to -'} &nbsp;</Text>
+					<Spinner />
+				</>
 			) : (
 				<>
 					{status.spotify ? (
 						<>
+							<Text h5>{'Listening to -'} &nbsp;</Text>
 							<Link
 								href={`https://open.spotify.com/track/${
 									status.spotify!.track_id
 								}`}
 							>
-								<Music />
+								<Avatar src={status.spotify!.album_art_url} />
 							</Link>
 							<Spacer />
 							<Text h5>
@@ -32,9 +34,7 @@ export default function NowPlaying() {
 						</>
 					) : (
 						<>
-							<Music />
-							<Spacer />
-							<Text h5>Nothing</Text>
+							<Text h5>{'Listening to Nothing'} </Text>
 						</>
 					)}
 				</>
