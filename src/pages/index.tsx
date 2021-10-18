@@ -25,10 +25,9 @@ export default function Home() {
 				>
 					<Text h1>Hey! &nbsp;I&apos;m Milo 👋</Text>
 				</motion.div>
-
 			</Grid.Container>
 			<Grid.Container justify="center">
-			<motion.div
+				<motion.div
 					initial="hidden"
 					animate="visible"
 					variants={{
@@ -45,9 +44,9 @@ export default function Home() {
 						},
 					}}
 				>
-				<Text p>I like to program things</Text>
+					<Text p>I like to program things</Text>
 				</motion.div>
-				</Grid.Container>
+			</Grid.Container>
 			<Grid.Container>
 				<OpenSourceProjects />
 			</Grid.Container>
