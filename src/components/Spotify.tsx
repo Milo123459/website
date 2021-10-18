@@ -1,4 +1,4 @@
-import { Loading, Text, Grid, Spacer } from '@geist-ui/react';
+import { Spinner, Text, Grid, Spacer } from '@geist-ui/react';
 import { Music } from '@geist-ui/react-icons';
 import Link from 'next/link';
 import { useLanyard } from 'react-use-lanyard';
@@ -12,7 +12,7 @@ export default function NowPlaying() {
 	return (
 		<Grid.Container>
 			{loading ? (
-				<Loading>Loading</Loading>
+				<Spinner />
 			) : (
 				<>
 					{status.spotify ? (
