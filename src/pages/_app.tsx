@@ -1,75 +1,70 @@
 import 'modern-normalize/modern-normalize.css';
-import Head from 'next/head';
 import 'inter-ui/inter.css';
-import {
-	GeistProvider,
-	CssBaseline,
-	Page,
-	Breadcrumbs,
-	Grid,
-	Spacer,
-} from '@geist-ui/react';
-import Link from 'next/link';
-import { Home } from '@geist-ui/react-icons';
-import { useRouter } from 'next/router';
-import { Fragment } from 'react';
-
-interface Props extends React.SVGProps<SVGElement> {
-	color?: string;
-	size?: number | string;
-}
-
-interface Breadcrumb {
-	href: string;
-	icon: React.FunctionComponent<Props>;
-}
-
-const breadcrumbs: Breadcrumb[] = [
-	{
-		href: '/',
-		icon: Home,
-	},
-];
+import { GeistProvider, CssBaseline, Page, Spacer, Themes } from '@geist-ui/react';
+import { useState } from 'react'
+import { motion } from 'framer-motion';
+import NavBreadCrumb from '../components/Nav';
+import SEO from '../components/Seo';
+import Footer from '../components/Footer';
+import '../css/globals.css'
+const theme = Themes.createFromDark({
+	type: 'Moilo',
+	"palette": {
+		"accents_1": "#111",
+		"accents_2": "#333",
+		"accents_3": "#444",
+		"accents_4": "#666",
+		"accents_5": "#888",
+		"accents_6": "#999",
+		"accents_7": "#eaeaea",
+		"accents_8": "#fafafa",
+		"background": "#000",
+		"foreground": "#fff",
+		"selection": "#b2b7bf",
+		"secondary": "#888",
+		"code": "#79ffe1",
+		"border": "#333",
+		"link": "#3291ff"
+	  },
+	  "expressiveness": {
+		"dropdownBoxShadow": "0 0 0 1px #333",
+		"shadowSmall": "0 0 0 1px #333",
+		"shadowMedium": "0 0 0 1px #333",
+		"shadowLarge": "0 0 0 1px #333",
+		"portalOpacity": 0.75
+	  }
+  })
 
 function MyApp({ Component, pageProps }) {
-	const route = useRouter();
+	const [themeType] = useState('dark')
 	return (
 		<>
-			<Head>
-				<meta property="og:title" content="Milo" />
-				<meta
-					property="og:description"
-					content="Milo's website, to show off some cool things!"
-				/>
-				<title>Milo123459</title>
-			</Head>
-			<GeistProvider themeType="dark">
+			<SEO />
+			<GeistProvider themes={[theme]} themeType={"Moilo"}>
 				<CssBaseline />
 				<Page dotBackdrop>
-					<Grid.Container>
-						<Breadcrumbs>
-							{breadcrumbs.map((breadcrumb, index) => {
-								return (
-									<Fragment key={index}>
-										<Link href={breadcrumb.href} passHref>
-											<Breadcrumbs.Item
-												nextLink
-												aria-disabled={route.route === breadcrumb.href}
-												style={{
-													color:
-														route.route === breadcrumb.href ? '#59a1f7' : '',
-												}}
-											>
-												<breadcrumb.icon />
-											</Breadcrumbs.Item>
-										</Link>
-									</Fragment>
-								);
-							})}
-						</Breadcrumbs>
-					</Grid.Container>
+					<NavBreadCrumb />
 					<Spacer />
 					<Component {...pageProps} />
+					<motion.div
+					initial="hidden"
+					animate="visible"
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0,
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 1.2,
+							},
+						},
+					}}
+				>
+				<Footer />
+				</motion.div>
 				</Page>
 			</GeistProvider>
 		</>
