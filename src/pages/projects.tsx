@@ -1,5 +1,6 @@
 import { Text, Grid } from '@geist-ui/react';
 import { motion } from 'framer-motion';
+import OpenSourceProjects from '../components/OpenSourceProjects';
 
 export default function Home() {
 	return (
@@ -22,7 +23,7 @@ export default function Home() {
 						},
 					}}
 				>
-					<Text h1>Hey! &nbsp;I&apos;m Milo 👋</Text>
+					<Text h1>Projects</Text>
 				</motion.div>
 			</Grid.Container>
 			<Grid.Container justify="center">
@@ -43,7 +44,7 @@ export default function Home() {
 						},
 					}}
 				>
-					<Text p>I like to program things</Text>
+					<OpenSourceProjects />
 				</motion.div>
 			</Grid.Container>
 		</>
