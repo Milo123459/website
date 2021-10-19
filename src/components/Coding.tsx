@@ -19,11 +19,18 @@ export default function Coding() {
 					{status.activities.find((v) => v.name === 'Visual Studio Code') ? (
 						<>
 							<Text p>
-								Currently working on{' '}
-								{status.activities
-									.find((v) => v.name === 'Visual Studio Code')
-									.state.replace('📂', '')}
-								&nbsp;
+								{(function () {
+									let rendered = status.activities
+										.find((v) => v.name === 'Visual Studio Code')
+										.state.replace('📂', '')
+										.split(' ');
+									return (
+										<Text p>
+											Currently working on <b>{rendered[0]}</b> in{' '}
+											<b>{rendered.at(-1)}</b>
+										</Text>
+									);
+								})()}
 							</Text>
 							<Spacer />
 						</>
