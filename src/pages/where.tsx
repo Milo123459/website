@@ -18,7 +18,7 @@ const Locations: Where[] = [
 	{
 		title: 'Lead developer',
 		where: 'Observer',
-		href: 'https://observerbot.xyz',
+		href: 'https://discord.gg/HkFGjvVeqq',
 	},
 	{
 		title: 'Lead developer',
