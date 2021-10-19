@@ -6,7 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "prettier --write . && next lint"
+		"lint": "prettier --write . && next lint --max-warnings=0"
 	},
 	"dependencies": {
 		"@geist-ui/react": "^2.2.0",

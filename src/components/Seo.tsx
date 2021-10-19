@@ -5,7 +5,7 @@ export default function SEO() {
 			<Head>
 				<meta property="og:title" content="Milo" />
 				<meta property="og:description" content="Milo's personal website" />
-				<title>Milo123459</title>
+				<title>Milo&apos;s website</title>
 			</Head>
 		</>
 	);

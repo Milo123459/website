@@ -20,7 +20,7 @@ export default function About() {
 						<code>Rust</code>, and I love it for its performance and DX. Aside
 						from how I started programming, my pronouns are <code>he/him</code>,
 						and if you want to chat with me, you can send me a PM on Twitter{' '}
-						<Link passHref={false} href="https://twitter.com/salvagedev">
+						<Link passHref href="https://twitter.com/salvagedev">
 							<code>@salvagedev</code>
 						</Link>
 						.
