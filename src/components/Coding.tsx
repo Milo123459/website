@@ -16,7 +16,10 @@ export default function Coding() {
 				</>
 			) : (
 				<>
-					{status.activities.find((v) => v.name === 'Visual Studio Code') ? (
+					{status.activities.find((v) => v.name === 'Visual Studio Code') &&
+					(status.activities.find((v) => v.name === 'Visual Studio Code').state
+						?.length ||
+						false) ? (
 						<>
 							<Text p>
 								{(function () {
