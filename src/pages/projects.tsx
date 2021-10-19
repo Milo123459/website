@@ -1,5 +1,4 @@
 import { Text, Grid } from '@geist-ui/react';
-import { motion } from 'framer-motion';
 import OpenSourceProjects from '../components/OpenSourceProjects';
 import Transition from '../components/Transition';
 
