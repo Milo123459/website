@@ -1,4 +1,4 @@
-import { Home, List, Info } from '@geist-ui/react-icons';
+import { Home, List, Info, MapPin } from '@geist-ui/react-icons';
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { Breadcrumbs, Grid } from '@geist-ui/react';
@@ -26,6 +26,10 @@ const breadcrumbs: Breadcrumb[] = [
 	{
 		href: '/about',
 		icon: Info,
+	},
+	{
+		href: '/where',
+		icon: MapPin,
 	},
 ];
 
