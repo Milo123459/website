@@ -23,7 +23,7 @@ export default function Coding() {
 						<>
 							<Text p>
 								{(function () {
-									let rendered = status.activities
+									const rendered = status.activities
 										.find((v) => v.name === 'Visual Studio Code')
 										.state.replace('📂', '')
 										.split(' ');
