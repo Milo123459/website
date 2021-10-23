@@ -4,7 +4,6 @@ import { GeistProvider, CssBaseline, Page, Spacer } from '@geist-ui/react';
 import NavBreadCrumb from '../components/Navigation';
 import SEO from '../components/Seo';
 import Footer from '../components/Footer';
-import '../css/globals.css';
 import DarkPlus from '../themes/DarkPlus';
 
 function MyApp({ Component, pageProps }) {
