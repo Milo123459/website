@@ -11,7 +11,7 @@ export default function NowPlaying() {
 		<Grid.Container justify="center">
 			{loading ? (
 				<>
-					<Text h5>&nbsp;</Text>
+					<Text h5>Listening to -</Text>
 					<Spinner />
 				</>
 			) : (
