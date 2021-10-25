@@ -30,6 +30,16 @@ const Locations: Where[] = [
 		where: 'Chrono',
 		href: 'https://github.com/chronotope/chrono',
 	},
+	{
+		title: 'Contributor',
+		where: 'Fig',
+		href: 'https://fig.sh',
+	},
+	{
+		title: 'Contributor',
+		where: 'Starship',
+		href: 'https://github.com/starship/starship',
+	},
 ];
 
 export default function Where() {
