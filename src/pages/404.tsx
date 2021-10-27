@@ -1,5 +1,6 @@
-import { Text, Grid } from '@geist-ui/react';
+import { Text, Grid, Link } from '@geist-ui/react';
 import Transition from '../components/Transition';
+import NextLink from 'next/link';
 
 export default function Home() {
 	return (
@@ -13,7 +14,11 @@ export default function Home() {
 				<Transition delay={0.8}>
 					<Text p>
 						The page you were looking for couldn&apos;t be found. Perhaps go
-						home?
+						<NextLink href="/" passHref>
+							<Link color icon>
+								&nbsp;home?
+							</Link>
+						</NextLink>
 					</Text>
 				</Transition>
 			</Grid.Container>
