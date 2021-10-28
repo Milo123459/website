@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@geist-ui/react": "^2.2.0",
 		"@geist-ui/react-icons": "^1.0.1",
-		"framer-motion": "^4.1.17",
+		"framer-motion": "^5.0.0",
 		"inter-ui": "^3.19.3",
 		"modern-normalize": "^1.1.0",
 		"next": "^12.0.1",
