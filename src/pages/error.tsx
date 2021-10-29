@@ -6,12 +6,15 @@ export default function Home() {
 		<>
 			<Grid.Container justify="center">
 				<Transition delay={0.4}>
-					<Text h1>Hey! &nbsp;I&apos;m Milo 👋</Text>
+					<Text h1>Oh no! Something went wrong</Text>
 				</Transition>
 			</Grid.Container>
 			<Grid.Container justify="center">
 				<Transition delay={0.8}>
-					<Text p>I like to program things</Text>
+					<Text p>
+						There was an error on that page. Sorry! (Check the console for more
+						details)
+					</Text>
 				</Transition>
 			</Grid.Container>
 		</>

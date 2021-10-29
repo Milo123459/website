@@ -1,36 +1,27 @@
+import { Text, Grid, Link } from '@geist-ui/react';
+import Transition from '../components/Transition';
 import NextLink from 'next/link';
-import {
-	Box,
-	Heading,
-	Text,
-	Container,
-	Divider,
-	Button,
-	Center,
-} from '@chakra-ui/react';
-import { FaHome } from 'react-icons/fa';
 
-const NotFound = () => {
+export default function Home() {
 	return (
-		<Container>
-			<Center>
-				<Heading as="h1">Not found</Heading>
-			</Center>
-			<Center>
-				<Text>The page you&apos;re looking for was not found.</Text>
-			</Center>
-			<Divider my={6} />
-
-			<Box my={6} align="center">
-				<NextLink href="/">
-					<Button colorScheme="teal">
-						Return&nbsp;
-						<FaHome />
-					</Button>
-				</NextLink>
-			</Box>
-		</Container>
+		<>
+			<Grid.Container justify="center">
+				<Transition delay={0.4}>
+					<Text h1>Hey! Are you lost?</Text>
+				</Transition>
+			</Grid.Container>
+			<Grid.Container justify="center">
+				<Transition delay={0.8}>
+					<Text p>
+						The page you were looking for couldn&apos;t be found. Perhaps go
+						<NextLink href="/" passHref>
+							<Link color icon>
+								&nbsp;home?
+							</Link>
+						</NextLink>
+					</Text>
+				</Transition>
+			</Grid.Container>
+		</>
 	);
-};
-
-export default NotFound;
+}

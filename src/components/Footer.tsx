@@ -1,72 +1,34 @@
-import {
-	Box,
-	Center,
-	chakra,
-	Stack,
-	useColorModeValue,
-	VisuallyHidden,
-} from '@chakra-ui/react';
-import { ReactNode } from 'react';
-import { FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { Grid, Spacer } from '@geist-ui/react';
+import { Twitter, Youtube, Github } from '@geist-ui/react-icons';
+import Spotify from '../components/Spotify';
+import Link from 'next/link';
 
-const SocialButton = ({
-	children,
-	label,
-	href,
-}: {
-	children: ReactNode;
-	label: string;
-	href: string;
-}) => {
+export default function Footer() {
 	return (
-		<chakra.button
-			bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-			rounded={'full'}
-			w={8}
-			h={8}
-			cursor={'pointer'}
-			as={'a'}
-			href={href}
-			display={'inline-flex'}
-			alignItems={'center'}
-			justifyContent={'center'}
-			transition={'background 0.3s ease'}
-			_hover={{
-				bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-			}}
-		>
-			<VisuallyHidden>{label}</VisuallyHidden>
-			{children}
-		</chakra.button>
-	);
-};
-
-const Footer = () => {
-	return (
-		<Box align="center" fontSize="sm">
-			<Center>
-				<Stack direction={'row'} spacing={6}>
-					<SocialButton
-						label={'Twitter'}
-						href={'https://twitter.com/salvagedev'}
-					>
-						<FaTwitter />
-					</SocialButton>
-					<SocialButton
-						label={'YouTube'}
-						href={'https://www.youtube.com/salvagedev'}
-					>
-						<FaYoutube />
-					</SocialButton>
-					<SocialButton label={'Github'} href={'https://github.com/Milo123459'}>
-						<FaGithub />
-					</SocialButton>
-				</Stack>
-			</Center>
+		<footer>
+			<Spacer />
+			<Grid.Container justify="center">
+				<Grid>
+					<Link passHref href="https://twitter.com/salvagedev">
+						<Twitter />
+					</Link>
+				</Grid>
+				<Spacer />
+				<Grid>
+					<Link passHref href="https://youtube.com/salvagedev">
+						<Youtube />
+					</Link>
+				</Grid>
+				<Spacer />
+				<Grid>
+					<Link passHref href="https://github.com/Milo123459">
+						<Github />
+					</Link>
+				</Grid>
+				<Spacer />
+			</Grid.Container>
 			<br />
-			&copy; {new Date().getFullYear()} Milo. All Rights Reserved.
-		</Box>
+			<Spotify />
+		</footer>
 	);
-};
-
-export default Footer;
+}

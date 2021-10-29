@@ -1,8 +1,7 @@
-import { Text, Grid, Link, Spacer } from '@geist-ui/react';
-import Transition from '../components/Transition';
-import { Fragment } from 'react';
+import { useState, Fragment } from 'react';
+import { Button, Modal, Text, Spacer, Link } from '@geist-ui/react';
 import NextLink from 'next/link';
-import Coding from '../components/Coding';
+import { X } from '@geist-ui/react-icons';
 
 interface Project {
 	name: string;
@@ -24,21 +23,21 @@ const projects: Project[] = [
 	},
 ];
 
-export default function Home() {
+export default function OpenSourceProjects() {
+	const [openSourceState, setOpenSourceState] = useState(false);
+	const openSourceHandler = () => setOpenSourceState(true);
+	const openSourceCloseHandler = () => {
+		setOpenSourceState(false);
+	};
+
 	return (
 		<>
-			<Grid.Container justify="center">
-				<Transition delay={0.4}>
-					<Text h1>Projects</Text>
-				</Transition>
-			</Grid.Container>
-			<Grid.Container justify="center">
-				<Transition delay={0.8}>
-					<Coding />
-				</Transition>
-			</Grid.Container>
-			<Grid.Container justify="center">
-				<Transition delay={0.8}>
+			<Button auto onClick={openSourceHandler}>
+				Open source projects
+			</Button>
+			<Modal visible={openSourceState} onClose={openSourceCloseHandler}>
+				<Modal.Title>Open source projects</Modal.Title>
+				<Modal.Content>
 					<Text>
 						{projects.map((project, index) => {
 							return (
@@ -54,8 +53,12 @@ export default function Home() {
 							);
 						})}
 					</Text>
-				</Transition>
-			</Grid.Container>
+				</Modal.Content>
+				<Modal.Action passive onClick={() => setOpenSourceState(false)}>
+					<X />
+					Close
+				</Modal.Action>
+			</Modal>
 		</>
 	);
 }
