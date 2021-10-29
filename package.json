@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build --openssl-legacy-provider",
 		"start": "next start",
 		"lint": "prettier --write . && next lint --max-warnings=0"
 	},
@@ -24,6 +24,7 @@
 		"@types/react": "17.0.33",
 		"eslint": "7",
 		"eslint-config-next": "12.0.1",
+		"prettier": "^2.4.1",
 		"typescript": "4.4.4"
 	}
 }
