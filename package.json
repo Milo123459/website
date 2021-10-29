@@ -1,30 +1,29 @@
 {
-  "name": "salvage-website",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@chakra-ui/icons": "^1.0.16",
-    "@chakra-ui/react": "^1.6.10",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "framer-motion": "^5.0.0",
-    "next": "12.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "react-use-lanyard": "^0.1.0"
-  },
-  "devDependencies": {
-    "@types/node": "16.11.6",
-    "@types/react": "17.0.33",
-    "eslint": "7",
-    "eslint-config-next": "12.0.1",
-    "typescript": "4.4.4"
-  }
+    "name": "salvage-website",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@chakra-ui/icons": "^1.0.16",
+        "@chakra-ui/react": "^1.6.10",
+        "@emotion/react": "^11",
+        "@emotion/styled": "^11",
+        "framer-motion": "^5.0.0",
+        "next": "12.0.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-icons": "^4.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "16.11.6",
+        "@types/react": "17.0.33",
+        "eslint": "7",
+        "eslint-config-next": "12.0.1",
+        "typescript": "4.4.4"
+    }
 }
