@@ -1,26 +1,21 @@
-import 'modern-normalize/modern-normalize.css';
-import 'inter-ui/inter.css';
-import { GeistProvider, CssBaseline, Page, Spacer } from '@geist-ui/react';
-import NavBreadCrumb from '../components/Navigation';
-import SEO from '../components/Seo';
+import { AppProps } from 'next/app';
+import { ChakraProvider } from '@chakra-ui/react';
 import Footer from '../components/Footer';
-import DarkPlus from '../themes/DarkPlus';
+import theme from '../lib/theme';
+import Layout from '../components/layouts/Main';
+import Fonts from '../components/Fonts';
+import { AnimatePresence } from 'framer-motion';
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, router }: AppProps) {
 	return (
-		<>
-			<SEO />
-			<GeistProvider themes={[DarkPlus]} themeType="DarkPlus">
-				<CssBaseline />
-				<Page dotBackdrop>
-					<NavBreadCrumb />
-					<Spacer />
+		<ChakraProvider theme={theme}>
+			<Fonts />
+			<Layout router={router}>
+				<AnimatePresence exitBeforeEnter initial={true}>
 					<Component {...pageProps} />
-					<Footer />
-				</Page>
-			</GeistProvider>
-		</>
+				</AnimatePresence>
+			</Layout>
+			<Footer />
+		</ChakraProvider>
 	);
 }
-
-export default MyApp;
