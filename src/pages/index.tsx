@@ -2,22 +2,9 @@ import {
   Container,
   Box,
   Heading,
-  Image,
-  useColorModeValue,
-  Link,
-  ListItem,
-  OrderedList,
-  List,
-  Button,
   Center
 } from '@chakra-ui/react';
 import React from 'react';
-import {
-  FaEnvelopeOpen,
-  FaGithub,
-  FaMapMarkerAlt,
-  FaTwitter
-} from 'react-icons/fa';
 import Paragraph from '../components/paragraph';
 import Section from '../components/Section';
 export default function Home() {
