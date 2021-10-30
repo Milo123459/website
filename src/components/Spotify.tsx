@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useLanyard } from 'react-use-lanyard';
 
 export default function NowPlaying() {
-	const { loading, status /*, websocket */ } = useLanyard({
+	const { loading, status } = useLanyard({
 		userId: '450212014912962560',
 		socket: true,
 	});

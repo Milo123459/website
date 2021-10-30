@@ -1,17 +1,16 @@
 import { useLanyard } from 'react-use-lanyard';
-import { Text, Spacer, Spinner, Grid } from '@geist-ui/react';
+import { Text, Spinner } from '@geist-ui/react';
 
 export default function Coding() {
-	const { loading, status /*, websocket */ } = useLanyard({
+	const { loading, status } = useLanyard({
 		userId: '450212014912962560',
 		socket: true,
 	});
 
 	return (
-		<Grid.Container justify="center">
+		<>
 			{loading ? (
 				<>
-					<Text h5>&nbsp;</Text>
 					<Spinner />
 				</>
 			) : (
@@ -21,21 +20,18 @@ export default function Coding() {
 						?.length ||
 						false) ? (
 						<>
-							<Text p>
-								{(function () {
-									const rendered = status.activities
-										.find((v) => v.name === 'Visual Studio Code')
-										.state.replace('📂', '')
-										.split(' ');
-									return (
-										<Text p>
-											Currently working on <b>{rendered[0]}</b> in{' '}
-											<b>{rendered.at(-1)}</b>
-										</Text>
-									);
-								})()}
-							</Text>
-							<Spacer />
+							{(function () {
+								const rendered = status.activities
+									.find((v) => v.name === 'Visual Studio Code')
+									.state.replace('📂', '')
+									.split(' ');
+								return (
+									<Text p>
+										Currently working on <b>{rendered[0]}</b> in{' '}
+										<b>{rendered.at(-1)}</b>
+									</Text>
+								);
+							})()}
 						</>
 					) : (
 						<>
@@ -44,6 +40,6 @@ export default function Coding() {
 					)}
 				</>
 			)}
-		</Grid.Container>
+		</>
 	);
 }

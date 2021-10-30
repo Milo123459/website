@@ -2,7 +2,6 @@ import { Text, Grid, Link, Spacer } from '@geist-ui/react';
 import Transition from '../components/Transition';
 import { Fragment } from 'react';
 import NextLink from 'next/link';
-import Coding from '../components/Coding';
 
 interface Project {
 	name: string;
@@ -30,11 +29,6 @@ export default function Home() {
 			<Grid.Container justify="center">
 				<Transition delay={0.4}>
 					<Text h1>Projects</Text>
-				</Transition>
-			</Grid.Container>
-			<Grid.Container justify="center">
-				<Transition delay={0.8}>
-					<Coding />
 				</Transition>
 			</Grid.Container>
 			<Grid.Container justify="center">

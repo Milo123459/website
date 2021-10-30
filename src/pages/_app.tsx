@@ -1,10 +1,11 @@
 import 'modern-normalize/modern-normalize.css';
 import 'inter-ui/inter.css';
 import { GeistProvider, CssBaseline, Page, Spacer } from '@geist-ui/react';
-import NavBreadCrumb from '../components/Navigation';
+import BreadCrumbs from '../components/Navigation';
 import SEO from '../components/Seo';
 import Footer from '../components/Footer';
 import DarkPlus from '../themes/DarkPlus';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 			<GeistProvider themes={[DarkPlus]} themeType="DarkPlus">
 				<CssBaseline />
 				<Page dotBackdrop>
-					<NavBreadCrumb />
+					<BreadCrumbs />
 					<Spacer />
 					<Component {...pageProps} />
 					<Footer />

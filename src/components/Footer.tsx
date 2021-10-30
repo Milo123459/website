@@ -27,7 +27,7 @@ export default function Footer() {
 				</Grid>
 				<Spacer />
 			</Grid.Container>
-			<br />
+			<Spacer />
 			<Spotify />
 		</footer>
 	);
