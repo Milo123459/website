@@ -35,7 +35,7 @@ export default function Coding() {
 						</>
 					) : (
 						<>
-							<Text h5>{'Not coding anything'} </Text>
+							<Text p>{'Not coding anything'} </Text>
 						</>
 					)}
 				</>
