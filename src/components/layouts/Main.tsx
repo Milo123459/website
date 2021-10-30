@@ -1,6 +1,6 @@
 import { Container, Box } from '@chakra-ui/react';
 import Nav from '../Nav';
-import SEO from '../SEO';
+import SEO from '../Seo';
 export default function Main({ children, router }) {
 	return (
 		<Box as="main" pb={8}>
