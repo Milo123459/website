@@ -21,6 +21,11 @@ const projects: Project[] = [
 		description:
 			"Go back to the start of time, where DataStores weren't complex. (Roblox)",
 	},
+	{
+		name: 'with_lock',
+		link: 'https://github.com/Milo123459/with_lock',
+		description: 'Prevent deadlocks in Rust',
+	},
 ];
 
 export default function Home() {
