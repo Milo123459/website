@@ -9,7 +9,7 @@
         {
             "name": "lint",
             "execute": [
-                "yarn next lint"
+                "yarn next lint --max-warnings=0"
             ]
         }
     ],
