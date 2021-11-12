@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 			<SEO />
 			<GeistProvider themes={[DarkPlus]} themeType="DarkPlus">
 				<CssBaseline />
-				<Page dotBackdrop>
+				<Page>
 					<BreadCrumbs />
 					<Spacer />
 					<Component {...pageProps} />

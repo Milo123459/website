@@ -93,7 +93,6 @@ function RepoInformation(props: Props) {
 						🍴 {data.forks_count}
 					</Text>
 				</Card>
-				<Spacer />
 				<Card>
 					<Text h4>Links</Text>
 					<Text p>
