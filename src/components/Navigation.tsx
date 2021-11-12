@@ -12,6 +12,7 @@ interface Props extends React.SVGProps<SVGElement> {
 interface Breadcrumb {
 	href: string;
 	icon: React.FunctionComponent<Props>;
+	startsWith?: boolean;
 }
 
 const breadcrumbs: Breadcrumb[] = [
@@ -22,6 +23,7 @@ const breadcrumbs: Breadcrumb[] = [
 	{
 		href: '/projects',
 		icon: List,
+		startsWith: true,
 	},
 	{
 		href: '/about',
@@ -49,9 +51,19 @@ export default function BreadcrumbsComponent() {
 								<Link href={breadcrumb.href} passHref>
 									<Breadcrumbs.Item
 										nextLink
-										aria-disabled={route.route === breadcrumb.href}
+										aria-disabled={
+											breadcrumb?.startsWith
+												? route.route.startsWith(breadcrumb.href)
+												: route.route === breadcrumb.href
+										}
 										style={{
-											color: route.route === breadcrumb.href ? '#59a1f7' : '',
+											color: (
+												breadcrumb?.startsWith
+													? route.route.startsWith(breadcrumb.href)
+													: route.route === breadcrumb.href
+											)
+												? '#59a1f7'
+												: '',
 										}}
 									>
 										<breadcrumb.icon />
