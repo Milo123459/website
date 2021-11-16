@@ -6,7 +6,7 @@ export default function Home() {
 		<>
 			<Grid.Container justify="center">
 				<Transition delay={0.4}>
-					<Text h1>Hey! &nbsp;I&apos;m Milo 👋</Text>
+					<Text h1>Hey! &nbsp;I&apos;m Milo</Text>
 				</Transition>
 			</Grid.Container>
 			<Grid.Container justify="center">
