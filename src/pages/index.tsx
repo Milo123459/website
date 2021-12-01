@@ -11,7 +11,7 @@ export default function Home() {
 			</Grid.Container>
 			<Grid.Container justify="center">
 				<Transition delay={0.8}>
-					<Text p>I like to program things</Text>
+					<Text p>I like to program things.</Text>
 				</Transition>
 			</Grid.Container>
 		</>

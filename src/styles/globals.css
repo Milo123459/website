@@ -11,3 +11,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.rehype-code-title {
+	font-weight: bold;
+}
