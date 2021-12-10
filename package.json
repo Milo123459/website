@@ -13,7 +13,7 @@
 		"@geist-ui/react-icons": "^1.0.1",
 		"contentlayer": "^0.0.32",
 		"date-fns": "^2.27.0",
-		"esbuild": "^0.14.0",
+		"esbuild": "^0.14.2",
 		"framer-motion": "^5.3.3",
 		"inter-ui": "^3.19.3",
 		"modern-normalize": "^1.1.0",
