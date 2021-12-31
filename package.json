@@ -24,7 +24,7 @@
 		"react-query": "3.34.2",
 		"react-use-lanyard": "^0.1.0",
 		"reading-time": "^1.5.0",
-		"rehype-autolink-headings": "^6.1.0",
+		"rehype-autolink-headings": "^6.1.1",
 		"rehype-code-titles": "^1.0.3",
 		"rehype-shiki": "^0.0.9",
 		"rehype-slug": "^5.0.0",
