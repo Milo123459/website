@@ -9,7 +9,7 @@
 		"lint": "prettier --write . && next lint --max-warnings=0"
 	},
 	"dependencies": {
-		"@geist-ui/react": "^2.2.0",
+		"@geist-ui/react": "^2.2.5",
 		"@geist-ui/react-icons": "^1.0.1",
 		"contentlayer": "0.0.33",
 		"date-fns": "2.27.0",
