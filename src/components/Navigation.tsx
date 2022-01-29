@@ -1,91 +1,40 @@
-import {
-	Home,
-	List,
-	Info,
-	MapPin,
-	Activity,
-	Briefcase,
-} from '@geist-ui/react-icons';
+import Link from './Link';
+import Container from './Container';
 import { Fragment } from 'react';
-import Link from 'next/link';
-import { Breadcrumbs, Grid } from '@geist-ui/react';
-import { useRouter } from 'next/router';
 
-interface Props extends React.SVGProps<SVGElement> {
-	color?: string;
-	size?: number | string;
-}
-
-interface Breadcrumb {
-	href: string;
-	icon: React.FunctionComponent<Props>;
-	startsWith?: boolean;
-}
-
-const breadcrumbs: Breadcrumb[] = [
+const links: { href: string; text: string }[] = [
 	{
 		href: '/',
-		icon: Home,
+		text: 'home',
 	},
 	{
 		href: '/projects',
-		icon: List,
-		startsWith: true,
-	},
-	{
-		href: '/about',
-		icon: Info,
-	},
-	{
-		href: '/where',
-		icon: MapPin,
-	},
-	{
-		href: '/activity',
-		icon: Activity,
-	},
-	{
-		href: '/blog',
-		icon: Briefcase,
-		startsWith: true,
+		text: 'projects',
 	},
 ];
 
-export default function BreadcrumbsComponent() {
-	const route = useRouter();
+export default function Navigation() {
 	return (
-		<>
-			<Grid.Container justify="center">
-				<Breadcrumbs>
-					{breadcrumbs.map((breadcrumb, index) => {
+		<div>
+			<Container horizontal>
+				{links.map((link, index) => {
+					const should_render_line = index !== links.length - 1;
+					if (should_render_line) {
 						return (
-							<Fragment key={index}>
-								<Link href={breadcrumb.href} passHref>
-									<Breadcrumbs.Item
-										nextLink
-										aria-disabled={
-											breadcrumb?.startsWith
-												? route.route.startsWith(breadcrumb.href)
-												: route.route === breadcrumb.href
-										}
-										style={{
-											color: (
-												breadcrumb?.startsWith
-													? route.route.startsWith(breadcrumb.href)
-													: route.route === breadcrumb.href
-											)
-												? '#59a1f7'
-												: '',
-										}}
-									>
-										<breadcrumb.icon />
-									</Breadcrumbs.Item>
-								</Link>
+							<Fragment key={link.href}>
+								<Link href={link.href}>{link.text}</Link>
+								<span className="text-gray-700 dark:text-white">|</span>
 							</Fragment>
 						);
-					})}
-				</Breadcrumbs>
-			</Grid.Container>
-		</>
+					} else {
+						return (
+							<Fragment key={link.href}>
+								<Link href={link.href}>{link.text}</Link>
+							</Fragment>
+						);
+					}
+				})}
+			</Container>
+		</div>
 	);
 }

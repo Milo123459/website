@@ -1,17 +1,9 @@
-* {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-	overflow-y: scroll;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*::-webkit-scrollbar {
-	display: none;
-}
-
-html {
-	scroll-behavior: smooth;
-}
-
-.rehype-code-title {
-	font-weight: bold;
+*,
+*::before,
+*::after {
+	font-family: 'Roboto Mono', sans-serif;
 }

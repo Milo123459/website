@@ -1,25 +1,20 @@
 import 'modern-normalize/modern-normalize.css';
-import 'inter-ui/inter.css';
-import { GeistProvider, CssBaseline, Page, Spacer } from '@geist-ui/react';
-import BreadCrumbs from '../components/Navigation';
-import SEO from '../components/Seo';
-import Footer from '../components/Footer';
-import DarkPlus from '../themes/DarkPlus';
+import { ThemeProvider } from 'next-themes';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import Navigation from '../components/Navigation';
 import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<SEO />
-			<GeistProvider themes={[DarkPlus]} themeType="DarkPlus">
-				<CssBaseline />
-				<Page>
-					<BreadCrumbs />
-					<Spacer />
-					<Component {...pageProps} />
-					<Footer />
-				</Page>
-			</GeistProvider>
+			<ThemeProvider attribute="class">
+				<Navigation />
+				<Component {...pageProps} />
+			</ThemeProvider>
+			<Head>
+				<title>milo.solar</title>
+			</Head>
 		</>
 	);
 }

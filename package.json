@@ -9,33 +9,22 @@
 		"lint": "prettier --write . && next lint --max-warnings=0"
 	},
 	"dependencies": {
-		"@geist-ui/react": "^2.2.0",
-		"@geist-ui/react-icons": "^1.0.1",
-		"contentlayer": "0.0.33",
-		"date-fns": "2.27.0",
-		"esbuild": "0.14.3",
-		"framer-motion": "5.4.5",
-		"inter-ui": "^3.19.3",
 		"modern-normalize": "^1.1.0",
 		"next": "12.0.7",
-		"next-contentlayer": "0.0.33",
+		"next-themes": "^0.0.15",
 		"react": "17.0.2",
-		"react-dom": "17.0.2",
-		"react-query": "3.34.2",
-		"react-use-lanyard": "^0.1.0",
-		"reading-time": "^1.5.0",
-		"rehype-autolink-headings": "^6.1.0",
-		"rehype-code-titles": "^1.0.3",
-		"rehype-shiki": "^0.0.9",
-		"rehype-slug": "^5.0.0",
-		"remark-gfm": "^3.0.1"
+		"react-dom": "17.0.2"
 	},
 	"devDependencies": {
 		"@types/node": "16.11.12",
 		"@types/react": "^17.0.37",
+		"autoprefixer": "^10.4.2",
 		"eslint": "8.4.1",
 		"eslint-config-next": "12.0.7",
+		"postcss": "^8.4.5",
 		"prettier": "2.5.1",
+		"prettier-plugin-tailwindcss": "^2.2.12",
+		"tailwindcss": "^3.0.17",
 		"typescript": "4.5.3"
 	}
 }

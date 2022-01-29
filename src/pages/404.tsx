@@ -1,27 +1,20 @@
-import { Text, Grid, Link } from '@geist-ui/react';
-import Transition from '../components/Transition';
-import NextLink from 'next/link';
+import Container from '../components/Container';
+import Header from '../components/Header';
+import { useRouter } from 'next/router';
+import Paragraph from '../components/Paragraph';
+import Bold from '../components/Bold';
+import Link from '../components/Link';
 
-export default function Home() {
+export default function NotFound() {
+	const router = useRouter();
+
 	return (
-		<>
-			<Grid.Container justify="center">
-				<Transition delay={0.4}>
-					<Text h1>Hey! Are you lost?</Text>
-				</Transition>
-			</Grid.Container>
-			<Grid.Container justify="center">
-				<Transition delay={0.8}>
-					<Text p>
-						The page you were looking for couldn&apos;t be found. Perhaps go
-						<NextLink href="/" passHref>
-							<Link color icon>
-								&nbsp;home?
-							</Link>
-						</NextLink>
-					</Text>
-				</Transition>
-			</Grid.Container>
-		</>
+		<Container>
+			<Header>404 - Page not found</Header>
+			<Paragraph>
+				The requested page <Bold>{router.asPath}</Bold> couldn&apos; be found.{' '}
+				<Link href="/">Go home?</Link>
+			</Paragraph>
+		</Container>
 	);
 }
