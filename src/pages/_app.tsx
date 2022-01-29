@@ -9,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<Fragment>
 			<Navigation />
-			<Component {...pageProps} />
+			<div className="md:h-screen">
+				<Component {...pageProps} />
+			</div>
 			<Head>
 				<title>milo.solar</title>
 			</Head>
