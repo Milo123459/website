@@ -1,21 +1,19 @@
 import 'modern-normalize/modern-normalize.css';
-import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import { Fragment } from 'react';
 import Navigation from '../components/Navigation';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<>
-			<ThemeProvider attribute="class" defaultTheme="system">
-				<Navigation />
-				<Component {...pageProps} />
-			</ThemeProvider>
+		<Fragment>
+			<Navigation />
+			<Component {...pageProps} />
 			<Head>
 				<title>milo.solar</title>
 			</Head>
-		</>
+		</Fragment>
 	);
 }
 

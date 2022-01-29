@@ -7,3 +7,7 @@
 *::after {
 	font-family: 'Roboto Mono', sans-serif;
 }
+
+html {
+	@apply dark:bg-[#121212];
+}
