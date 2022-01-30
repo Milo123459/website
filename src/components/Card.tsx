@@ -59,6 +59,7 @@ export default function Card(props: {
 							width={'40px'}
 							className="shrink-0 rounded-full"
 							alt="avatar"
+							priority
 						/>
 					</div>
 					<div className="w-full flex-1 space-y-1 py-1">
