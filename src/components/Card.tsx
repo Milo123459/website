@@ -32,7 +32,7 @@ export default function Card(props: {
 }) {
 	if (props.loading) {
 		return (
-			<div className="max-w-sm rounded-md border border-blue-400 p-4 shadow">
+			<div className="max-w-sm rounded-md border border-blue-500 p-4 shadow dark:border-blue-300">
 				<div className="flex animate-pulse flex-wrap space-x-4">
 					<div className="h-10 w-10 rounded-full bg-slate-700"></div>
 					<div className="flex-1 space-y-6 py-1">
@@ -50,7 +50,7 @@ export default function Card(props: {
 		);
 	} else {
 		return (
-			<div className="mx-auto w-full max-w-sm rounded-md border border-blue-400 p-4 shadow">
+			<div className="mx-auto w-full max-w-sm rounded-md border border-blue-500 p-4 shadow dark:border-blue-300">
 				<div className="flex space-x-4">
 					<div className="shrink-0 rounded-full">
 						<Image
