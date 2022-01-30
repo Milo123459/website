@@ -2,6 +2,8 @@ import Container from '../components/Container';
 import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import Link from '../components/Link';
+import Card from '../components/Card';
+import Spacer from '../components/Spacer';
 
 export default function Home() {
 	return (
@@ -16,6 +18,19 @@ export default function Home() {
 				would like to check out my projects, check out{' '}
 				<Link href="/projects">my projects page</Link>.
 			</Paragraph>
+			<Spacer />
+			<Card
+				data={{
+					avatar:
+						'https://cdn.discordapp.com/avatars/450212014912962560/a_9572703e941a8160e454cf886c58bc47.png?size=4096',
+					title: 'Milo123459',
+					description: 'being unproductive',
+					links: [
+						{ text: 'github', href: 'https://github.com/Milo123459' },
+						{ text: 'twitter', href: 'https://twitter.com/salvagedev' },
+					],
+				}}
+			/>
 		</Container>
 	);
 }
