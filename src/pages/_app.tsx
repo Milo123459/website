@@ -8,9 +8,15 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<Fragment>
-			<Navigation />
-			<div className="md:h-screen">
-				<Component {...pageProps} />
+			<div className="flex justify-center">
+				<div>
+					<Navigation />
+				</div>
+			</div>
+			<div className="flex justify-center">
+				<div>
+					<Component {...pageProps} />
+				</div>
 			</div>
 			<Head>
 				<title>milo.solar</title>
