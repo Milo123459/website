@@ -21,8 +21,7 @@ export default function Home() {
 			<Spacer />
 			<Card
 				data={{
-					avatar:
-						'https://cdn.discordapp.com/avatars/450212014912962560/a_9572703e941a8160e454cf886c58bc47.png?size=4096',
+					avatar: '/salvage.png',
 					title: 'Milo123459',
 					description: 'being unproductive',
 					links: [
