@@ -42,6 +42,21 @@ const projects: {
 		],
 		avatar: '/chrono.jfif',
 	},
+	{
+		title: 'Observer',
+		description: 'Simple Discord bot to give you your Hypixel statistics.',
+		links: [
+			{
+				text: 'discord server',
+				href: 'https://discord.gg/5RwVUcJYkp',
+			},
+			{
+				text: 'invite',
+				href: 'https://discord.com/oauth2/authorize?client_id=813718772908163082&permissions=388168&scope=applications.commands%20bot',
+			},
+		],
+		avatar: '/observer.png',
+	},
 ];
 
 export default function Projects() {
