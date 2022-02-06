@@ -14,8 +14,8 @@ export default function Home() {
 				Welcome to my website! I&apos;m a guy who enjoys writing code and
 				building things. I primarily use{' '}
 				<Link href="https://rust-lang.org">Rust</Link> to build my new projects
-				due to it&apos;s amazing performance and developer experience. If you
-				would like to check out my projects, check out{' '}
+				due to its amazing performance and developer experience. If you would
+				like to check out my projects, check out{' '}
 				<Link href="/projects">my projects page</Link>.
 			</Paragraph>
 			<Spacer />
