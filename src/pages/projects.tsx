@@ -89,11 +89,10 @@ export default function Projects() {
 			<Header>Projects</Header>
 			<Paragraph>
 				I have authored various projects including{' '}
-				<Link href="https://github.com/Milo123459/glitter">Glitter</Link>: my
-				biggest open source project to date. I enjoy working on OSS libraries,
-				but I also like to expand my work and work on things like{' '}
-				<Link href="#sushibot">SushiBot</Link> - a Discord bot about making
-				sushi!
+				<Link href="#glitter">Glitter</Link>: my biggest open source project to
+				date. I enjoy working on OSS libraries, but I also like to expand my
+				work and work on things like <Link href="#sushibot">SushiBot</Link> - a
+				Discord bot about making sushi!
 			</Paragraph>
 			<Spacer />
 			{projects.map((project, index) => {
