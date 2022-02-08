@@ -5,10 +5,12 @@ export default function Link(props: {
 	children: React.ReactNode;
 }) {
 	return (
-		<NextLink href={props.href}>
-			<span className="text-blue-500 hover:animate-pulse hover:cursor-pointer dark:text-blue-300">
-				{props.children}
-			</span>
+		<NextLink href={props.href} passHref>
+			<a href={props.href}>
+				<span className="text-blue-500 hover:animate-pulse hover:cursor-pointer dark:text-blue-300">
+					{props.children}
+				</span>
+			</a>
 		</NextLink>
 	);
 }
