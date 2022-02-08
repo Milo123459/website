@@ -57,6 +57,30 @@ const projects: {
 		],
 		avatar: '/observer.png',
 	},
+	{
+		title: 'SushiBot',
+		description:
+			'A fun and interactive Discord bot allowing you to make sushi!',
+		links: [
+			{
+				text: 'discord server',
+				href: 'https://discord.gg/WmxZRazTEk',
+			},
+			{
+				text: 'invite',
+				href: 'https://discord.com/oauth2/authorize?client_id=850045648639098901&permissions=139586750528&scope=bot%20applications.commands',
+			},
+			{
+				text: 'video',
+				href: 'https://www.youtube.com/watch?v=aRmQryY4q2o',
+			},
+			{
+				text: 'top.gg',
+				href: 'https://top.gg/bot/850045648639098901',
+			},
+		],
+		avatar: '/sushibot.png',
+	},
 ];
 
 export default function Projects() {
@@ -68,23 +92,25 @@ export default function Projects() {
 				<Link href="https://github.com/Milo123459/glitter">Glitter</Link>: my
 				biggest open source project to date. I enjoy working on OSS libraries,
 				but I also like to expand my work and work on things like{' '}
-				<Link href="https://top.gg/bot/850045648639098901">SushiBot</Link> - a
-				Discord bot about cooking sushi!
+				<Link href="#sushibot">SushiBot</Link> - a Discord bot about making
+				sushi!
 			</Paragraph>
 			<Spacer />
 			{projects.map((project, index) => {
 				const should_render_spacer = index !== projects.length - 1;
 				return (
 					<Fragment key={project.title}>
-						<Card
-							data={{
-								avatar: project.avatar,
-								title: project.title,
-								description: project.description,
-								links: project.links,
-							}}
-						/>
-						{should_render_spacer ? <Spacer /> : null}
+						<div id={project.title.toLowerCase()}>
+							<Card
+								data={{
+									avatar: project.avatar,
+									title: project.title,
+									description: project.description,
+									links: project.links,
+								}}
+							/>
+							{should_render_spacer ? <Spacer /> : null}
+						</div>
 					</Fragment>
 				);
 			})}
