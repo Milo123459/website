@@ -21,7 +21,7 @@ export default function Home() {
 			<Spacer />
 			<Card
 				data={{
-					avatar: '/salvage.png',
+					avatar: '/salvage.webp',
 					title: 'Milo123459',
 					description: 'being unproductive',
 					links: [

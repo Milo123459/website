@@ -25,7 +25,7 @@ const projects: {
 				href: 'https://dev.to/milo123459/introducing-glitter-4505',
 			},
 		],
-		avatar: '/glitter.png',
+		avatar: '/glitter.webp',
 	},
 	{
 		title: 'Chrono',
@@ -40,7 +40,7 @@ const projects: {
 				href: 'https://crates.io/crates/chrono',
 			},
 		],
-		avatar: '/chrono.jfif',
+		avatar: '/chrono.webp',
 	},
 	{
 		title: 'Observer',
@@ -55,7 +55,7 @@ const projects: {
 				href: 'https://discord.com/oauth2/authorize?client_id=813718772908163082&permissions=388168&scope=applications.commands%20bot',
 			},
 		],
-		avatar: '/observer.png',
+		avatar: '/observer.webp',
 	},
 	{
 		title: 'SushiBot',
@@ -79,7 +79,7 @@ const projects: {
 				href: 'https://top.gg/bot/850045648639098901',
 			},
 		],
-		avatar: '/sushibot.png',
+		avatar: '/sushibot.webp',
 	},
 ];
 
