@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main } from 'next/document';
-import DeferNextScript from '../utils/deferNextScrpit';
+import DeferNextScript from '../utils/deferNextScript';
 
 class MyDocument extends Document {
 	render(): JSX.Element {
