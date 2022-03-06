@@ -23,12 +23,11 @@ function InlineText(props: {
 
 export default function Card(props: {
 	loading?: boolean;
-	data?: {
-		avatar: string;
-		title: string;
-		description: string;
-		links: { text: string; href: string }[];
-	};
+	avatar?: string;
+	title?: string;
+	description?: string;
+	links?: { text: string; href: string }[];
+	statusText?: React.ReactNode;
 }) {
 	if (props.loading) {
 		return (
@@ -54,7 +53,7 @@ export default function Card(props: {
 				<div className="flex space-x-4">
 					<div className="shrink-0 rounded-full">
 						<Image
-							src={props.data.avatar}
+							src={props.avatar}
 							height={'40px'}
 							width={'40px'}
 							className="shrink-0 rounded-full"
@@ -63,15 +62,19 @@ export default function Card(props: {
 					</div>
 					<div className="w-full flex-1 space-y-1 py-1">
 						<div className="max-w-[280px] rounded text-left">
-							<InlineText>{props.data.title}</InlineText>
+							<InlineText>{props.title}</InlineText>
 						</div>
+						{props.statusText ? (
+							<div className="max-w-[280px] rounded py-0.5 text-left text-sm text-gray-700 dark:text-neutral-300">
+								{props.statusText}
+							</div>
+						) : null}
 						<div className="max-w-[280px] rounded text-left">
-							<InlineText description>{props.data.description}</InlineText>
+							<InlineText description>{props.description}</InlineText>
 						</div>
 						<div className="space-x-1 rounded text-left">
-							{props.data.links.map((link, index) => {
-								const should_render_line =
-									index !== props.data.links.length - 1;
+							{props.links.map((link, index) => {
+								const should_render_line = index !== props.links.length - 1;
 								const first_element = index === 0;
 								if (should_render_line) {
 									return (

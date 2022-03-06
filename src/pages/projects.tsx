@@ -101,12 +101,10 @@ export default function Projects() {
 					<Fragment key={project.title}>
 						<div id={project.title.toLowerCase()}>
 							<Card
-								data={{
-									avatar: project.avatar,
-									title: project.title,
-									description: project.description,
-									links: project.links,
-								}}
+								avatar={project.avatar}
+								title={project.title}
+								description={project.description}
+								links={project.links}
 							/>
 							{should_render_spacer ? <Spacer /> : null}
 						</div>
