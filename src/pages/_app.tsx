@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Fragment } from 'react';
 import Navigation from '../components/Navigation';
 import '../styles/globals.css';
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -21,6 +22,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>milo.solar</title>
 			</Head>
+			<Script
+				async
+				src="https://arc.io/widget.min.js#TbGGrA4L"
+				strategy="worker"
+			/>
 		</Fragment>
 	);
 }

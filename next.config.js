@@ -4,6 +4,9 @@ module.exports = {
 	images: {
 		domains: ['cdn.discordapp.com'],
 	},
+	experimental: {
+		nextScriptWorkers: true,
+	},
 
 	webpack: (config, { dev, isServer }) => {
 		// Replace React with Preact only in client production build
