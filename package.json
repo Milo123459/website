@@ -9,7 +9,6 @@
 		"lint": "prettier --write . && next lint --max-warnings=0"
 	},
 	"dependencies": {
-		"@builder.io/partytown": "^0.5.1",
 		"modern-normalize": "^1.1.0",
 		"next": "^12.1.2",
 		"preact": "^10.6.6",
