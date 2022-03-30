@@ -29,7 +29,7 @@ const projects: {
 	},
 	{
 		title: 'Chrono',
-		description: 'Rust & datetime library for Rust.',
+		description: 'Datetime library for Rust.',
 		links: [
 			{
 				text: 'github',
