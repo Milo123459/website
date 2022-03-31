@@ -22,7 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>milo.solar</title>
 			</Head>
-			<Script async src="https://arc.io/widget.min.js#TbGGrA4L" />
+			{process.env.NODE_ENV === 'production' ? (
+				<Script async src="https://arc.io/widget.min.js#TbGGrA4L" />
+			) : null}
 		</Fragment>
 	);
 }

@@ -10,10 +10,9 @@
 	},
 	"dependencies": {
 		"modern-normalize": "^1.1.0",
-		"next": "^12.1.2",
-		"preact": "^10.6.6",
-		"react": "17.0.2",
-		"react-dom": "17.0.2",
+		"next": "^12.1.4",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
 		"react-use-lanyard": "^0.1.1"
 	},
 	"devDependencies": {
@@ -21,7 +20,7 @@
 		"@types/react": "^17.0.43",
 		"autoprefixer": "^10.4.4",
 		"eslint": "^8.12.0",
-		"eslint-config-next": "^12.1.2",
+		"eslint-config-next": "^12.1.4",
 		"postcss": "^8.4.12",
 		"prettier": "^2.6.1",
 		"prettier-plugin-tailwindcss": "^0.1.8",
