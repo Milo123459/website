@@ -71,10 +71,6 @@ const projects: {
 				href: 'https://discord.com/oauth2/authorize?client_id=850045648639098901&permissions=139586750528&scope=bot%20applications.commands',
 			},
 			{
-				text: 'video',
-				href: 'https://www.youtube.com/watch?v=aRmQryY4q2o',
-			},
-			{
 				text: 'top.gg',
 				href: 'https://top.gg/bot/850045648639098901',
 			},
