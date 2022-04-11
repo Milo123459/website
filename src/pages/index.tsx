@@ -22,7 +22,7 @@ export default function Home() {
 				<Link href="https://rust-lang.org">Rust</Link> to build my new projects
 				due to its amazing performance and developer experience. If you would
 				like to check out my projects, check out{' '}
-				<Link href="/projects">my projects page</Link>.
+				<Link href="/projects">my projects page</Link>. Thanks for visiting!
 			</Paragraph>
 			<Spacer />
 			<Card
