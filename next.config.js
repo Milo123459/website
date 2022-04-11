@@ -4,4 +4,7 @@ module.exports = {
 	images: {
 		domains: ['cdn.discordapp.com'],
 	},
+	experimental: {
+		nextScriptWorkers: true,
+	},
 };
