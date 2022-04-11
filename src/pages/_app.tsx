@@ -26,10 +26,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<>
 					<Script async src="https://arc.io/widget.min.js#TbGGrA4L" />
 					<Script
-						async
-						defer
-						data-custom-id="822bf80b-b46c-45d0-82a6-f483acde0287"
-						src="https://umami.milo.solar/umami.js"
+						src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+						data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
 						strategy="worker"
 					/>
 				</>
