@@ -25,11 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 			{process.env.NODE_ENV === 'production' ? (
 				<>
 					<Script async src="https://arc.io/widget.min.js#TbGGrA4L" />
-					<Script
-						src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
-						data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-						strategy="worker"
-					/>
 				</>
 			) : null}
 		</Fragment>
