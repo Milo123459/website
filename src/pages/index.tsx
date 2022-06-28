@@ -4,14 +4,8 @@ import Paragraph from '../components/Paragraph';
 import Link from '../components/Link';
 import Card from '../components/Card';
 import Spacer from '../components/Spacer';
-import { useLanyard } from 'react-use-lanyard';
 
 export default function Home() {
-	const { loading, status } = useLanyard({
-		socket: true,
-		userId: '450212014912962560',
-	});
-
 	return (
 		<Container>
 			<Header>Hey, I&apos;m Milo!</Header>
@@ -33,28 +27,6 @@ export default function Home() {
 					{ text: 'github', href: 'https://github.com/Milo123459' },
 					{ text: 'twitter', href: 'https://twitter.com/salvagedev' },
 				]}
-				statusText={
-					<>
-						<div className="max-w-[280px] rounded text-left">
-							{loading ? (
-								'Loading..'
-							) : (
-								<>
-									Listening to{' '}
-									{status.spotify ? (
-										<>
-											<b>{status.spotify.song}</b> on{' '}
-											<b>{status.spotify.album}</b> by{' '}
-											<b>{status.spotify.artist}</b>
-										</>
-									) : (
-										'nothing'
-									)}
-								</>
-							)}
-						</div>
-					</>
-				}
 			/>
 		</Container>
 	);
