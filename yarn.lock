@@ -770,10 +770,10 @@ eslint-visitor-keys@^3.3.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz#f6480fa6b1f30efe2d1968aa8ac745b862469826"
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
 
-eslint@^8.18.0:
-  version "8.18.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.18.0.tgz#78d565d16c993d0b73968c523c0446b13da784fd"
-  integrity sha512-As1EfFMVk7Xc6/CvhssHUjsAQSkpfXvUGMFC3ce8JDe6WvqCgRrLOBQbVpsBFr1X1V+RACOadnzVvcUS5ni2bA==
+eslint@^8.19.0:
+  version "8.19.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.19.0.tgz#7342a3cbc4fbc5c106a1eefe0fd0b50b6b1a7d28"
+  integrity sha512-SXOPj3x9VKvPe81TjjUJCYlV4oJjQw68Uek+AM0X4p+33dj2HY5bpTZOgnQHcG2eAm1mtCU9uNMnJi7exU/kYw==
   dependencies:
     "@eslint/eslintrc" "^1.3.0"
     "@humanwhocodes/config-array" "^0.9.2"
@@ -1661,14 +1661,6 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-use-lanyard@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/react-use-lanyard/-/react-use-lanyard-0.1.2.tgz#9181e31c1540c1adcfabbfb2528eec3f90860e2c"
-  integrity sha512-QScCarw4MQelEhjcQO9HvTKWUfpIvt+ZcMPvOOaaDRJk/QNPml27rNzILM7k4TrhrevSuMmgF+3WJtTcUlqidA==
-  dependencies:
-    swr "^1.3.0"
-    tslib "^2.4.0"
-
 react@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
@@ -1866,11 +1858,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-swr@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
-  integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
 
 tailwindcss@^3.1.4:
   version "3.1.4"
