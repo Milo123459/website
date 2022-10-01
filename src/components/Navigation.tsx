@@ -7,10 +7,6 @@ const links: { href: string; text: string }[] = [
 		href: '/',
 		text: 'home',
 	},
-	{
-		href: '/projects',
-		text: 'projects',
-	},
 ];
 
 export default function Navigation() {
