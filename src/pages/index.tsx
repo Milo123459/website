@@ -2,17 +2,23 @@ import Container from '../components/Container';
 import Header from '../components/Header';
 import Paragraph from '../components/Paragraph';
 import Link from '../components/Link';
+import Spacer from '../components/Spacer';
 
 export default function Home() {
 	return (
 		<Container>
-			<Header>Hey, I&apos;m Milo!</Header>
-			<br />
+			<Header>Milo&apos;s website</Header>
+			<Spacer />
 			<Paragraph>
-				Welcome to my website! I&apos;m a guy who enjoys writing code and
-				building things. I primarily use{' '}
-				<Link href="https://rust-lang.org">Rust</Link> to build my new projects
-				due to its amazing performance and developer experience.
+				Welcome to my website. I enjoy wiriting{' '}
+				<Link href="https://rust-lang.org">Rust</Link> and refining tools.
+			</Paragraph>
+			<Spacer />
+			<Paragraph>
+				If you are interested in my projects, consider checking out my{' '}
+				<Link href="https://github.com/Milo123459">GitHub</Link>. I post almost
+				all of my open source work there. If you are interested in my open
+				source experience, take a look <Link href="/experience">here</Link>.
 			</Paragraph>
 		</Container>
 	);

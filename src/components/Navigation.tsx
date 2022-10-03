@@ -7,6 +7,14 @@ const links: { href: string; text: string }[] = [
 		href: '/',
 		text: 'home',
 	},
+	{
+		href: '/experience',
+		text: 'experience',
+	},
+	{
+		href: '/interests',
+		text: 'interests',
+	},
 ];
 
 export default function Navigation() {

@@ -12,7 +12,7 @@ export default function NotFound() {
 		<Container>
 			<Header>404 - Page not found</Header>
 			<Paragraph>
-				The requested page <Bold>{router.asPath}</Bold> couldn&apos; be found.{' '}
+				The requested page couldn&apos;t be found.{' '}
 				<Link href="/">Go home?</Link>
 			</Paragraph>
 		</Container>
