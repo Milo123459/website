@@ -7,7 +7,7 @@ import Spacer from '../components/Spacer';
 export default function Home() {
 	return (
 		<Container>
-			<Header>Milos website</Header>
+			<Header>Milo&apos;s website</Header>
 			<Spacer />
 			<Paragraph>
 				Welcome to my website. I enjoy writing{' '}
