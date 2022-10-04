@@ -7,10 +7,10 @@ import Spacer from '../components/Spacer';
 export default function Home() {
 	return (
 		<Container>
-			<Header>Milo&apos;s website</Header>
+			<Header>Milos website</Header>
 			<Spacer />
 			<Paragraph>
-				Welcome to my website. I enjoy wiriting{' '}
+				Welcome to my website. I enjoy writing{' '}
 				<Link href="https://rust-lang.org">Rust</Link> and refining tools.
 			</Paragraph>
 			<Spacer />
