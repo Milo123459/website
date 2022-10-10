@@ -1,4 +1,4 @@
-// /pages/api/og.tsx
+// TODO: add dynamic ness
 
 import { ImageResponse } from '@vercel/og';
 
