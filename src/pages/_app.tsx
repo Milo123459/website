@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			</div>
 			<Head>
 				<title>milo.solar</title>
+				<meta property="og:image" content="/api/og" />
 			</Head>
 		</Fragment>
 	);
