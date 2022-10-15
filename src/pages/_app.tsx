@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					property="og:image"
 					content={`https://milo.solar/api/og?lower=${router.asPath.slice(1)}`}
 				/>
+				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
 		</Fragment>
 	);
