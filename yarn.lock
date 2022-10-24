@@ -257,13 +257,13 @@
     "@typescript-eslint/types" "5.30.0"
     eslint-visitor-keys "^3.3.0"
 
-"@vercel/og@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.15.tgz#af1c55b39e1f03ddf5926263371d0af920a62a7a"
-  integrity sha512-AHa25M8Hxt+83aSAY+GPFYuE1oTNGzbw1sJZBa9AsYNUW6vmXPTGW9jJmOUnkjp2dp+wyY3gtAZRa26HjSeNSw==
+"@vercel/og@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@vercel/og/-/og-0.0.20.tgz#fe586d153e492edd87fe2bc2671ba223072bd47a"
+  integrity sha512-089P+TfqWz0xBxjOvOhkZIDDtfrLcye94H4IZ+SqxoGPWpNGXaBvRJER/z5SoJxJRcCAL8tPiK5zdjRskM6tLw==
   dependencies:
     "@resvg/resvg-wasm" "2.0.0-alpha.4"
-    satori "0.0.38"
+    satori "0.0.43"
     yoga-wasm-web "0.1.2"
 
 acorn-jsx@^5.3.2:
@@ -645,6 +645,11 @@ electron-to-chromium@^1.4.251:
   version "1.4.270"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.270.tgz"
   integrity sha512-KNhIzgLiJmDDC444dj9vEOpZEgsV96ult9Iff98Vanumn+ShJHd5se8aX6KeVxdc0YQeqdrezBZv89rleDbvSg==
+
+emoji-regex@^10.2.1:
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-10.2.1.tgz#a41c330d957191efd3d9dfe6e1e8e1e9ab048b3f"
+  integrity sha512-97g6QgOk8zlDRdgq1WxwgTMgEWGVAQvB5Fdpgc1MkNy56la5SKP9GsMXKDOdqwn90/41a8yPwIGk1Y6WVbeMQA==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
@@ -1857,15 +1862,16 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-satori@0.0.38:
-  version "0.0.38"
-  resolved "https://registry.yarnpkg.com/satori/-/satori-0.0.38.tgz#9d5ff4cf7f5be1f181e495c10e80f77e78412bd9"
-  integrity sha512-o8nMTp5IiLKi3oOw80Y3LdDAReGS+UfC1StQBAwlnFNzHmY1A3JGFT+9gam6x8I6uMDFrs82FnG9R/kI9iONdg==
+satori@0.0.43:
+  version "0.0.43"
+  resolved "https://registry.yarnpkg.com/satori/-/satori-0.0.43.tgz#865b80feed473fc254e389fa7c0bd4c1d8e9aad7"
+  integrity sha512-SzYwr+LsELWRJU9KMviEOE9TdShry+R5AdS54YQvgAVKFDN4yniAIzwQk1/z2TtIx0ceUT9zTeosWAoWvJBEtQ==
   dependencies:
     "@shuding/opentype.js" "1.4.0-beta.0"
     css-background-parser "^0.1.0"
     css-box-shadow "1.0.0-3"
     css-to-react-native "^3.0.0"
+    emoji-regex "^10.2.1"
     postcss-value-parser "^4.2.0"
     yoga-layout-prebuilt "^1.10.0"
 
