@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 import Navigation from '../components/Navigation';
 import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 			</Head>
+			<Analytics />
 		</Fragment>
 	);
 }
