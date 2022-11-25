@@ -6,11 +6,9 @@ export default function Link(props: {
 }) {
 	return (
 		<NextLink href={props.href} passHref>
-			<a href={props.href}>
-				<span className="text-blue-500 hover:animate-pulse hover:cursor-pointer dark:text-blue-300">
-					{props.children}
-				</span>
-			</a>
+			<span className="text-blue-500 hover:animate-pulse hover:cursor-pointer dark:text-blue-300">
+				{props.children}
+			</span>
 		</NextLink>
 	);
 }
