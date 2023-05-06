@@ -3,13 +3,13 @@
         {
             "name": "fmt",
             "execute": [
-                "yarn prettier --write ."
+                "pnpm prettier --write ."
             ]
         },
         {
             "name": "lint",
             "execute": [
-                "yarn next lint --max-warnings=0"
+                "pnpm next lint --max-warnings=0"
             ]
         }
     ],
