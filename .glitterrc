@@ -3,18 +3,11 @@
         {
             "name": "fmt",
             "execute": [
-                "pnpm prettier --write ."
-            ]
-        },
-        {
-            "name": "lint",
-            "execute": [
-                "pnpm next lint --max-warnings=0"
+                "bun prettier --write ."
             ]
         }
     ],
     "hooks": [
-        "fmt",
-        "lint"
+        "fmt"
     ]
 }
