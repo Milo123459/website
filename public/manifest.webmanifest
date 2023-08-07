@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "Milo",
+	"short_name": "Milo",
+	"description": "Milo's corner of the internet",
 	"icons": [
 		{
 			"src": "/192x192.png",
