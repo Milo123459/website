@@ -1,0 +1,13 @@
+{
+    "custom_tasks": [
+        {
+            "name": "fmt",
+            "execute": [
+                "pnpm format"
+            ]
+        }
+    ],
+    "hooks": [
+        "fmt"
+    ]
+}
