@@ -1,16 +1,17 @@
 {
-	"extends": "astro/tsconfigs/strictest",
+	"extends": "astro/tsconfigs/strict",
 	"compilerOptions": {
-		"baseUrl": ".",
-		"verbatimModuleSyntax": true,
+		"baseUrl": "src",
+		"jsx": "react-jsx",
 		"paths": {
-			"@/components/*": ["src/components/*.astro"],
-			"@/layouts/*": ["src/layouts/*.astro"],
-			"@/utils": ["src/utils/index.ts"],
-			"@/stores/*": ["src/stores/*"],
-			"@/data/*": ["src/data/*"],
-			"@/site-config": ["src/site.config.ts"]
+			"@assets/*": ["assets/*"],
+			"@config": ["config.ts"],
+			"@components/*": ["components/*"],
+			"@content/*": ["content/*"],
+			"@layouts/*": ["layouts/*"],
+			"@pages/*": ["pages/*"],
+			"@styles/*": ["styles/*"],
+			"@utils/*": ["utils/*"]
 		}
-	},
-	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
+	}
 }
