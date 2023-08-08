@@ -1,37 +1,35 @@
-import { defineConfig, sharpImageService } from "astro/config";
-import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
+import remarkToc from "remark-toc";
+import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
-import remarkUnwrapImages from "remark-unwrap-images";
 
 // https://astro.build/config
 export default defineConfig({
-	// ! Please remember to replace the following site property with your own domain
-	site: "https://milo.solar",
-	markdown: {
-		remarkPlugins: [remarkUnwrapImages],
-		shikiConfig: {
-			theme: "dracula",
-			wrap: true,
-		},
-	},
-	experimental: {
-		assets: true,
-	},
-	image: {
-		// https://docs.astro.build/en/guides/assets/#using-sharp
-		service: sharpImageService(),
-	},
+	site: "https://milo.solar", // replace this with your deployed domain
 	integrations: [
-		mdx({}),
 		tailwind({
 			applyBaseStyles: false,
 		}),
+		react(),
 		sitemap(),
-		prefetch(),
 	],
-	compressHTML: true,
+	markdown: {
+		remarkPlugins: [
+			remarkToc,
+			[
+				remarkCollapse,
+				{
+					test: "Table of contents",
+				},
+			],
+		],
+		shikiConfig: {
+			theme: "one-dark-pro",
+			wrap: true,
+		},
+	},
 	vite: {
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],

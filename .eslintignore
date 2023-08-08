@@ -1,4 +1,6 @@
-dist
+.husky
+.vscode
 node_modules
-.github
-.changeset
+public
+dist
+.yarn

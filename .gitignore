@@ -19,8 +19,17 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# misc
-*.pem
-.cache
+# ignore .astro directory
 .astro
-.vercel
+
+# ignore Jampack cache files
+.jampack/
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

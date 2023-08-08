@@ -42,4 +42,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm format -c .
+      - run: pnpm format -c
