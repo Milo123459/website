@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
@@ -18,7 +17,7 @@ const searchList = posts.map(({ data }) => ({
 }));
 ---
 
-<Layout title={`Search | ${SITE.title}`}>
+<Layout title={`Search`}>
 	<Header activeNav="search" />
 	<Main pageTitle="Search" pageDesc="Search any article ...">
 		<Search client:load searchList={searchList} />

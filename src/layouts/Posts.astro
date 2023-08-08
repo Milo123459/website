@@ -1,5 +1,4 @@
 ---
-import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
@@ -21,7 +20,7 @@ const prev = pageNum > 1 ? "" : "disabled";
 const next = pageNum < totalPages ? "" : "disabled";
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`Posts`}>
 	<Header activeNav="posts" />
 	<Main pageTitle="Posts" pageDesc="All the articles I've posted.">
 		<ul>
