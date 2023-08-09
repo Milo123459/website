@@ -15,7 +15,6 @@
 	"dependencies": {
 		"@astrojs/rss": "^2.4.4",
 		"@astrojs/turbolinks": "^0.2.2",
-		"@astrojs/vercel": "^3.8.0",
 		"@resvg/resvg-js": "^2.4.1",
 		"astro": "^2.10.3",
 		"fuse.js": "^6.6.2",

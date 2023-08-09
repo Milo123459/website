@@ -6,8 +6,6 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import turbolinks from "@astrojs/turbolinks";
 
-import vercel from "@astrojs/vercel/serverless";
-
 // https://astro.build/config
 export default defineConfig({
 	site: "https://milo.solar",
@@ -40,6 +38,4 @@ export default defineConfig({
 			exclude: ["@resvg/resvg-js"],
 		},
 	},
-	output: "server",
-	adapter: vercel(),
 });
