@@ -6,9 +6,12 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 import turbolinks from "@astrojs/turbolinks";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://milo.solar", // replace this with your deployed domain
+	site: "https://milo.solar",
+	// replace this with your deployed domain
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,
@@ -37,4 +40,6 @@ export default defineConfig({
 			exclude: ["@resvg/resvg-js"],
 		},
 	},
+	output: "server",
+	adapter: vercel(),
 });
