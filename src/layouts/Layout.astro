@@ -69,7 +69,7 @@ const socialImageURL = new URL(ogImage ? ogImage : SITE.ogImage, Astro.url.origi
 			)
 		}
 
-		<script is:inline src="/toggle-theme.js"></script>
+		<script is:inline data-cfasync="false" src="/toggle-theme.js"></script>
 	</head>
 	<body>
 		<slot />
