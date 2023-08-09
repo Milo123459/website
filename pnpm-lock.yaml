@@ -8,6 +8,9 @@ dependencies:
   "@astrojs/rss":
     specifier: ^2.4.4
     version: 2.4.4
+  "@astrojs/turbolinks":
+    specifier: ^0.2.2
+    version: 0.2.2
   "@resvg/resvg-js":
     specifier: ^2.4.1
     version: 2.4.1
@@ -253,6 +256,15 @@ packages:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+
+  /@astrojs/turbolinks@0.2.2:
+    resolution:
+      {
+        integrity: sha512-Np8lo4CM1dmzewkq77XhdNS7Nra+xKYK+AG2YXO3qYtH5TTC+LrxNht+hN92avu7xOe347Eot7dmFYLXLmUPww==,
+      }
+    dependencies:
+      turbolinks: 5.2.0
+    dev: false
 
   /@astrojs/webapi@2.2.0:
     resolution:
@@ -6934,6 +6946,13 @@ packages:
     dependencies:
       safe-buffer: 5.2.1
     dev: true
+
+  /turbolinks@5.2.0:
+    resolution:
+      {
+        integrity: sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==,
+      }
+    dev: false
 
   /type-check@0.4.0:
     resolution:
