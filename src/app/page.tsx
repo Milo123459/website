@@ -1,7 +1,7 @@
 import Title from "@/components/title";
 import Description from "@/components/description";
 import Container from "@/components/container";
-import Card from "@/components/card";
+import Card from "@/components/cardd";
 import Spacer from "@/components/spacer";
 
 export default function Home() {
