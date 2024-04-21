@@ -1,45 +1,28 @@
 {
-	"name": "astro-paper",
-	"version": "2.3.0",
-	"private": false,
-	"scripts": {
-		"dev": "astro dev --host",
-		"start": "astro dev",
-		"build": "astro build && jampack ./dist",
-		"preview": "astro preview",
-		"sync": "astro sync",
-		"astro": "astro",
-		"format": "prettier -w --plugin-search-dir=. --cache .",
-		"lint": "eslint ."
-	},
-	"dependencies": {
-		"@astrojs/rss": "^2.4.4",
-		"@astrojs/turbolinks": "^0.2.2",
-		"@resvg/resvg-js": "^2.4.1",
-		"astro": "^2.10.3",
-		"fuse.js": "^6.6.2",
-		"github-slugger": "^2.0.0",
-		"remark-collapse": "^0.1.2",
-		"remark-toc": "^8.0.1",
-		"satori": "^0.10.2",
-		"tailwindcss": "^3.3.3"
-	},
-	"devDependencies": {
-		"@astrojs/react": "^2.2.1",
-		"@astrojs/sitemap": "^2.0.1",
-		"@astrojs/tailwind": "^4.0.0",
-		"@divriots/jampack": "^0.13.0",
-		"@tailwindcss/typography": "^0.5.9",
-		"@types/github-slugger": "^2.0.0",
-		"@types/react": "^18.2.19",
-		"@typescript-eslint/parser": "^6.3.0",
-		"astro-eslint-parser": "^0.14.0",
-		"eslint": "^8.46.0",
-		"eslint-plugin-astro": "^0.28.0",
-		"prettier": "^2.8.8",
-		"prettier-plugin-astro": "^0.10.0",
-		"prettier-plugin-tailwindcss": "^0.4.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	}
+  "name": "website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "14.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "14.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  }
 }
