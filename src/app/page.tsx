@@ -41,6 +41,14 @@ export default function Home() {
           description="i have experience with many other languages and tools, but these are my favorites and deserve to be put on the homepage"
         />
       </Container>
+      <Title>projects</Title>
+      <Container>
+        <Card
+          title="sushibot"
+          description="an interactive discord bot about making sushi!"
+          link="/sushibot"
+        />
+      </Container>
     </>
   );
 }
