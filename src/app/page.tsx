@@ -18,7 +18,7 @@ export default function Home() {
       <Container>
         <Card
           title="rust"
-          description="i have been using rust for a few years now, and i love it! it is my favorite programming language"
+          description="i have been using rust for a few years now, and i love it"
           link="https://rust-lang.org"
         />
         <Card
