@@ -1,0 +1,61 @@
+# serene v5.3.0
+#
+# - docs: https://github.com/isunjn/serene/blob/latest/USAGE.md
+# - check for updates: https://github.com/isunjn/serene/releases
+#
+#=========================================================================================
+
+base_url = "https://milo.solar"
+title = "milo"
+description = "i like rust"
+default_language = "en"
+theme = "serene"
+output_dir = "public"
+compile_sass = true
+minify_html = false # Keep this false, as it may cause issues with some styles
+build_search_index = false # Keep this false, search is temporarily unsupported
+generate_feeds = false # Whether to generate a feed file in root, read docs for more info about rss feed
+feed_filenames = ["feed.xml"] # "feed.xml" | "atom.xml" | "rss.xml", read docs for more info
+taxonomies = [{ name = "tags" }, { name = "categories" }]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+extra_syntaxes_and_themes = ["themes/serene/highlight_themes"]
+highlight_themes_css = [
+  { theme = "serene-light", filename = "hl-light.css" },
+  { theme = "serene-dark", filename = "hl-dark.css" },
+]
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+#=========================================================================================
+
+[extra]
+
+sections = [
+  { name = "posts", path = "/posts", is_external = false },
+  { name = "about", path = "/about", is_external = false },
+]
+blog_section_path = "/posts"
+
+back_link_text = "Back" # Text of the back button
+force_theme = false # false | "light" | "dark"
+
+footer_copyright = "© 2025 Milo"
+footer_credits = true # Whether to show "Built with zola and serene" in footer
+
+not_found_error_text = "404 Not Found"
+not_found_recover_text = "« back to home"
+
+reaction = false # Whether to enable anonymous emoji reactions (Note: You need to set up a working api endpoint to enable this feature)
+reaction_align = "right" # "left" | "center" | "right"
+reaction_endpoint = "https://example.com/api/reaction"

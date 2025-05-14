@@ -3,4 +3,7 @@
   "extends": [
     "config:recommended"
   ]
+	"git-submodules": {
+		"enabled": true
+	}
 }
