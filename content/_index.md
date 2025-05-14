@@ -20,7 +20,6 @@ recent_more_text = "more »"
 comment = false
 date_format = "%b %-d, %Y"
 
-
 +++
 
 welcome to my website! i enjoy writing rust code, and scaling systems.
