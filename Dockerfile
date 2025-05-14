@@ -23,7 +23,8 @@ WORKDIR /project
 COPY --from=submodules / /project
 
 # Build the site
-RUN ["zola", "build"]
+# ENV RAILWAY_PUBLIC_DOMAIN=${RAILWAY_PUBLIC_DOMAIN}
+RUN ["zola", "build", "-u", "https://website-production-52a1.up.railway.app"]
 
 # Stage 2: Serve with static-web-server
 FROM ghcr.io/static-web-server/static-web-server:latest
