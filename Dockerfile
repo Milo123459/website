@@ -16,7 +16,7 @@ RUN set -eux; \
   done
 
 # Stage 1: Build with Zola
-FROM ghcr.io/getzola/zola:v0.20.0 as zola
+FROM ghcr.io/getzola/zola:v0.21.0 as zola
 WORKDIR /project
 
 # Copy the repo with submodules from previous stage
